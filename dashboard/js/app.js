@@ -40,7 +40,8 @@
     const elements = {
       'metaDate': surveyData.metadata.generatedDate,
       'metaResponses': `${surveyData.metadata.totalResponses} responses`,
-      'metaJobNo': surveyData.metadata.jobNumber
+      'metaJobNo': surveyData.metadata.jobNumber,
+      'demographicsTotal': `${surveyData.metadata.totalResponses} responses`
     };
 
     Object.entries(elements).forEach(([id, value]) => {
