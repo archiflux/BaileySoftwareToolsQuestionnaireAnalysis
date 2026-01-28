@@ -214,6 +214,49 @@
   }
 
   /**
+   * Initialize scroll-triggered animations
+   */
+  function initScrollAnimations() {
+    // Elements to animate on scroll
+    const animatableSelectors = [
+      '.widget',
+      '.metric-card',
+      '.insight-box',
+      '.discipline-card',
+      '.data-table-wrapper',
+      '.chart-container'
+    ];
+
+    const animatableElements = document.querySelectorAll(animatableSelectors.join(', '));
+
+    // Add scroll-animate class to all animatable elements
+    animatableElements.forEach(el => {
+      el.classList.add('scroll-animate');
+    });
+
+    // Create Intersection Observer for scroll animations
+    const animationObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add visible class to trigger animation
+          entry.target.classList.add('visible');
+          // Stop observing once animated
+          animationObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -50px 0px', // Trigger slightly before element is fully visible
+      threshold: 0.1
+    });
+
+    // Observe all animatable elements
+    animatableElements.forEach(el => {
+      animationObserver.observe(el);
+    });
+  }
+
+  /**
    * Back to top button
    */
   function initBackToTop() {
@@ -256,6 +299,7 @@
       initTableSorting();
       initBackToTop();
       initPrint();
+      initScrollAnimations();
     });
   } else {
     initNavigation();
@@ -263,6 +307,7 @@
     initTableSorting();
     initBackToTop();
     initPrint();
+    initScrollAnimations();
   }
 
   // Export for testing
