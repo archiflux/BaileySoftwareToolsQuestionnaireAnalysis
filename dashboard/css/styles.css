@@ -282,6 +282,10 @@ li {
   scroll-margin-top: calc(var(--metadata-height) + var(--space-lg));
 }
 
+.report-section:first-child {
+  margin-top: var(--space-lg);
+}
+
 .section-band {
   background: var(--color-primary-band);
   color: var(--color-text-inverse);
