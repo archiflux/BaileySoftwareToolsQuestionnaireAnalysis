@@ -770,6 +770,9 @@ li {
 
 .insight-box__content {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .insight-box__content strong {
@@ -1123,6 +1126,35 @@ li {
 
   .section-content {
     padding: var(--space-md);
+  }
+
+  /* Fix insight box overflow on mobile */
+  .insight-box {
+    flex-direction: column;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .insight-box__content {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .insight-box__content ul {
+    padding-left: var(--space-md);
+    margin: 0;
+  }
+
+  .insight-box__content li {
+    font-size: var(--text-small);
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Ensure tables don't overflow */
+  .data-table-wrapper {
+    max-width: 100%;
   }
 }
 

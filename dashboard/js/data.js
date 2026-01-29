@@ -990,8 +990,8 @@ const surveyData = {
             },
             "supersededBy": [
                   "Revit/Enscape",
-                  "Revit and Rhino",
-                  "Revit"
+                  "Revit",
+                  "Revit and Rhino"
             ],
             "byDiscipline": {
                   "architecture": 11
@@ -1012,8 +1012,8 @@ const surveyData = {
                   "other": 1
             },
             "supersededBy": [
-                  "AutoCAD replaced by Revit",
-                  "Revit"
+                  "Revit",
+                  "AutoCAD replaced by Revit"
             ],
             "byDiscipline": {
                   "fire-engineering": 1,
@@ -1074,8 +1074,8 @@ const surveyData = {
             },
             "supersededBy": [
                   "Google suite",
-                  "Google docs, sheets etc.",
-                  "Google Workspace and LibreOffice"
+                  "Google Workspace and LibreOffice",
+                  "Google docs, sheets etc."
             ],
             "byDiscipline": {
                   "quantity-surveying": 1,
