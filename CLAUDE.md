@@ -109,6 +109,53 @@ BaileySoftwareToolsQuestionnaireAnalysis/
 }
 ```
 
+### Handling "Other" Software Entries (Custom User-Specified Software)
+
+**CRITICAL**: "Other" entries require special handling to extract the user's custom software name.
+
+#### Identifying "Other" Entries
+- Software IDs ending in `-other` (e.g., `arch-ai-other`, `qs-measure-other`, `bs-contracts-other`)
+- These indicate the user selected "Other - please specify" and entered a custom software name
+
+#### Where Custom Names Are Stored
+The custom name is **NOT** in the JSON detail columns (`Currently Using Details`, etc.). It's in the `Full Response (JSON)` column's `softwareSelections` array:
+
+```json
+{
+  "softwareId": "arch-ai-other",
+  "softwareName": "Other - please specify",
+  "usageStatus": "currently-using",
+  "customName": "Midjourney"  // <-- THE ACTUAL USER-ENTERED NAME
+}
+```
+
+#### How to Extract Custom Names
+1. Parse the `Full Response (JSON)` column
+2. Access the `softwareSelections` array
+3. For entries where `softwareId` ends in `-other`:
+   - Use the `customName` field (this is what the user typed)
+   - Ignore `softwareName` (it's always "Other - please specify")
+
+#### Example Python Code
+```python
+def get_custom_name(record, software_id):
+    full_response = json.loads(record.get('Full Response (JSON)', '{}'))
+    for sw in full_response.get('softwareSelections', []):
+        if sw.get('softwareId') == software_id:
+            return sw.get('customName', sw.get('softwareName', ''))
+    return software_id
+```
+
+#### Why Custom Entries Matter
+Custom "Other" entries reveal:
+- Software tools the survey didn't include as options
+- Emerging tools gaining traction (e.g., Midjourney, ChatGPT)
+- Niche discipline-specific tools (e.g., Kreo for QS, Site Audit Pro for BS)
+- Personal productivity tools staff find valuable
+- Potential gaps in standard software provision
+
+The `update_dashboard.py` script handles this automatically via the `build_software_name_lookup()` function.
+
 ## Common Analysis Tasks
 
 When working with this data, AI assistants may be asked to:

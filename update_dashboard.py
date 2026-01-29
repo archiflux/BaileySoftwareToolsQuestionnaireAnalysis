@@ -242,6 +242,50 @@ def calculate_frequency_score(freq):
     }
     return freq_map.get(freq, 3)
 
+def build_software_name_lookup(record):
+    """
+    Build a lookup dictionary mapping softwareId -> actual software name
+    from the Full Response JSON's softwareSelections array.
+
+    This is critical for handling "other" entries where users specify custom software names.
+
+    GUIDANCE FOR FUTURE REFERENCE:
+    =============================
+    - "Other" software entries have IDs ending in '-other' (e.g., 'arch-ai-other', 'qs-measure-other')
+    - In softwareSelections, "other" entries have:
+      - softwareId: the ID ending in '-other'
+      - softwareName: "Other - please specify" (generic label)
+      - customName: THE ACTUAL USER-ENTERED SOFTWARE NAME (e.g., "Midjourney", "ChatGPT", "Kreo")
+    - For non-"other" entries, softwareName contains the actual software name
+    - The JSON detail columns (Currently Using Details, etc.) only contain softwareId, not the custom name
+    - Always prefer customName over softwareName for "other" entries
+
+    Example "other" entry in softwareSelections:
+    {
+      "softwareId": "arch-ai-other",
+      "softwareName": "Other - please specify",
+      "usageStatus": "currently-using",
+      "customName": "Midjourney"
+    }
+    """
+    lookup = {}
+    try:
+        full_response = json.loads(record.get('Full Response (JSON)', '{}'))
+        software_selections = full_response.get('softwareSelections', [])
+        for sw in software_selections:
+            sw_id = sw.get('softwareId', '')
+            # For "other" entries, use customName if available; otherwise use softwareName
+            custom_name = sw.get('customName', '')
+            sw_name = sw.get('softwareName', '')
+            # Prefer customName for "other" entries
+            actual_name = custom_name if custom_name else sw_name
+            if sw_id and actual_name:
+                lookup[sw_id] = actual_name
+    except:
+        pass
+    return lookup
+
+
 def analyze_data(records):
     """Analyze survey data and return structured results."""
 
@@ -291,6 +335,10 @@ def analyze_data(records):
     })
 
     for record in records:
+        # Build lookup for custom software names from Full Response JSON
+        # This is essential for mapping "other" software IDs to their actual names
+        software_name_lookup = build_software_name_lookup(record)
+
         # Demographics
         discipline = record.get('Discipline', '').strip()
         if discipline:
@@ -352,7 +400,8 @@ def analyze_data(records):
                 continue
 
             is_other = sw_id.endswith('-other') or '-other-' in sw_id or sw_id.startswith('other-')
-            custom_name = item.get('customName', item.get('softwareName', ''))
+            # Get custom name from the lookup (extracted from Full Response JSON's softwareSelections)
+            custom_name = software_name_lookup.get(sw_id, '')
             sw_name = get_software_name(sw_id, custom_name)
 
             currently_using[sw_name]['count'] += 1
@@ -387,7 +436,8 @@ def analyze_data(records):
                 continue
 
             is_other = sw_id.endswith('-other') or '-other-' in sw_id or sw_id.startswith('other-')
-            custom_name = item.get('customName', item.get('softwareName', ''))
+            # Get custom name from the lookup (extracted from Full Response JSON's softwareSelections)
+            custom_name = software_name_lookup.get(sw_id, '')
             sw_name = get_software_name(sw_id, custom_name)
 
             previously_used[sw_name]['count'] += 1
@@ -420,7 +470,8 @@ def analyze_data(records):
                 continue
 
             is_other = sw_id.endswith('-other') or '-other-' in sw_id or sw_id.startswith('other-')
-            custom_name = item.get('customName', item.get('softwareName', ''))
+            # Get custom name from the lookup (extracted from Full Response JSON's softwareSelections)
+            custom_name = software_name_lookup.get(sw_id, '')
             sw_name = get_software_name(sw_id, custom_name)
 
             would_like_to_use[sw_name]['count'] += 1

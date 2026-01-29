@@ -1,13 +1,13 @@
 /**
  * Bailey Partnership Software Survey - Processed Data
- * Generated: 2026-01-28
+ * Generated: 2026-01-29
  * Survey Period: January 2026
  */
 
 const surveyData = {
   metadata: {
     totalResponses: 75,
-    generatedDate: '2026-01-28',
+    generatedDate: '2026-01-29',
     surveyPeriod: 'January 2026',
     jobNumber: 'IIET-2026-001',
     status: 'Final'
@@ -458,21 +458,6 @@ const surveyData = {
             "isOther": false
       },
       {
-            "softwareName": "arch-office-other",
-            "userCount": 6,
-            "avgSatisfaction": 4.33,
-            "avgFrequency": 2.83,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "very-confident": 2,
-                  "somewhat-confident": 4
-            },
-            "byDiscipline": {
-                  "architecture": 6
-            },
-            "isOther": true
-      },
-      {
             "softwareName": "AutoCAD MEP",
             "userCount": 5,
             "avgSatisfaction": 4.2,
@@ -534,21 +519,6 @@ const surveyData = {
                   "interior-design": 1
             },
             "isOther": false
-      },
-      {
-            "softwareName": "qs-measure-other",
-            "userCount": 4,
-            "avgSatisfaction": 4.25,
-            "avgFrequency": 4.0,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "somewhat-confident": 3,
-                  "very-confident": 1
-            },
-            "byDiscipline": {
-                  "quantity-surveying": 4
-            },
-            "isOther": true
       },
       {
             "softwareName": "Revit MEP",
@@ -613,6 +583,21 @@ const surveyData = {
             "isOther": false
       },
       {
+            "softwareName": "Kreo",
+            "userCount": 3,
+            "avgSatisfaction": 4.33,
+            "avgFrequency": 4.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "somewhat-confident": 2,
+                  "very-confident": 1
+            },
+            "byDiscipline": {
+                  "quantity-surveying": 3
+            },
+            "isOther": true
+      },
+      {
             "softwareName": "Tedds",
             "userCount": 3,
             "avgSatisfaction": 4.67,
@@ -641,37 +626,6 @@ const surveyData = {
                   "structural-civil-engineering": 3
             },
             "isOther": false
-      },
-      {
-            "softwareName": "arch-ai-other",
-            "userCount": 3,
-            "avgSatisfaction": 4.67,
-            "avgFrequency": 3.67,
-            "trainingNeedScore": 1,
-            "trainingLevels": {
-                  "very-confident": 1,
-                  "need-more": 1,
-                  "somewhat-confident": 1
-            },
-            "byDiscipline": {
-                  "architecture": 3
-            },
-            "isOther": true
-      },
-      {
-            "softwareName": "qs-spec-other",
-            "userCount": 2,
-            "avgSatisfaction": 5.0,
-            "avgFrequency": 3.0,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "somewhat-confident": 1,
-                  "very-confident": 1
-            },
-            "byDiscipline": {
-                  "quantity-surveying": 2
-            },
-            "isOther": true
       },
       {
             "softwareName": "ACC Takeoff",
@@ -747,46 +701,18 @@ const surveyData = {
             "isOther": false
       },
       {
-            "softwareName": "struct-office-other",
-            "userCount": 2,
-            "avgSatisfaction": 4.5,
-            "avgFrequency": 3.0,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "very-confident": 1,
-                  "somewhat-confident": 1
-            },
-            "byDiscipline": {
-                  "structural-civil-engineering": 2
-            },
-            "isOther": true
-      },
-      {
-            "softwareName": "struct-ai-other",
-            "userCount": 2,
-            "avgSatisfaction": 4.5,
-            "avgFrequency": 5.0,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "very-confident": 2
-            },
-            "byDiscipline": {
-                  "structural-civil-engineering": 2
-            },
-            "isOther": true
-      },
-      {
-            "softwareName": "arch-bim-other",
+            "softwareName": "Copilot",
             "userCount": 2,
             "avgSatisfaction": 4.0,
-            "avgFrequency": 4.5,
+            "avgFrequency": 4.0,
             "trainingNeedScore": 0,
             "trainingLevels": {
                   "very-confident": 1,
                   "somewhat-confident": 1
             },
             "byDiscipline": {
-                  "architecture": 2
+                  "structural-civil-engineering": 1,
+                  "project-management": 1
             },
             "isOther": true
       },
@@ -820,46 +746,18 @@ const surveyData = {
             "isOther": false
       },
       {
-            "softwareName": "bs-contracts-other",
+            "softwareName": "LibreOffice",
             "userCount": 2,
-            "avgSatisfaction": 4.5,
-            "avgFrequency": 2.5,
+            "avgSatisfaction": 5.0,
+            "avgFrequency": 2.0,
             "trainingNeedScore": 0,
             "trainingLevels": {
-                  "somewhat-confident": 2
+                  "very-confident": 1,
+                  "somewhat-confident": 1
             },
             "byDiscipline": {
-                  "building-surveying": 2
-            },
-            "isOther": true
-      },
-      {
-            "softwareName": "bs-collab-other",
-            "userCount": 2,
-            "avgSatisfaction": 4.5,
-            "avgFrequency": 5.0,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "somewhat-confident": 1,
-                  "very-confident": 1
-            },
-            "byDiscipline": {
-                  "building-surveying": 2
-            },
-            "isOther": true
-      },
-      {
-            "softwareName": "arch-collab-other",
-            "userCount": 2,
-            "avgSatisfaction": 4.5,
-            "avgFrequency": 3.5,
-            "trainingNeedScore": 1,
-            "trainingLevels": {
-                  "somewhat-confident": 1,
-                  "need-more": 1
-            },
-            "byDiscipline": {
-                  "architecture": 2
+                  "architecture": 1,
+                  "structural-civil-engineering": 1
             },
             "isOther": true
       },
@@ -879,7 +777,49 @@ const surveyData = {
             "isOther": false
       },
       {
-            "softwareName": "struct-analysis-other",
+            "softwareName": "ACC for data capture and reporting",
+            "userCount": 2,
+            "avgSatisfaction": 5.0,
+            "avgFrequency": 4.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "somewhat-confident": 2
+            },
+            "byDiscipline": {
+                  "building-surveying": 2
+            },
+            "isOther": true
+      },
+      {
+            "softwareName": "KREO",
+            "userCount": 1,
+            "avgSatisfaction": 4.0,
+            "avgFrequency": 4.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "somewhat-confident": 1
+            },
+            "byDiscipline": {
+                  "quantity-surveying": 1
+            },
+            "isOther": true
+      },
+      {
+            "softwareName": "JCT Suite",
+            "userCount": 1,
+            "avgSatisfaction": 5.0,
+            "avgFrequency": 4.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "somewhat-confident": 1
+            },
+            "byDiscipline": {
+                  "quantity-surveying": 1
+            },
+            "isOther": true
+      },
+      {
+            "softwareName": "Hilti - Profis (Online Based)",
             "userCount": 1,
             "avgSatisfaction": 4.0,
             "avgFrequency": 3.0,
@@ -893,7 +833,7 @@ const surveyData = {
             "isOther": true
       },
       {
-            "softwareName": "struct-analysis-other-1",
+            "softwareName": "IdeaStatica",
             "userCount": 1,
             "avgSatisfaction": 4.0,
             "avgFrequency": 3.0,
@@ -907,7 +847,7 @@ const surveyData = {
             "isOther": true
       },
       {
-            "softwareName": "struct-analysis-other-2",
+            "softwareName": "Comflor ME",
             "userCount": 1,
             "avgSatisfaction": 3.0,
             "avgFrequency": 2.0,
@@ -921,7 +861,7 @@ const surveyData = {
             "isOther": true
       },
       {
-            "softwareName": "struct-analysis-other-3",
+            "softwareName": "CMF Metfloor",
             "userCount": 1,
             "avgSatisfaction": 3.0,
             "avgFrequency": 2.0,
@@ -935,7 +875,7 @@ const surveyData = {
             "isOther": true
       },
       {
-            "softwareName": "struct-collab-other",
+            "softwareName": "Procore",
             "userCount": 1,
             "avgSatisfaction": 3.0,
             "avgFrequency": 2.0,
@@ -949,7 +889,7 @@ const surveyData = {
             "isOther": true
       },
       {
-            "softwareName": "struct-collab-other-1",
+            "softwareName": "Aconex",
             "userCount": 1,
             "avgSatisfaction": 2.0,
             "avgFrequency": 2.0,
@@ -963,7 +903,21 @@ const surveyData = {
             "isOther": true
       },
       {
-            "softwareName": "struct-office-other-1",
+            "softwareName": "PDF Gear (free)",
+            "userCount": 1,
+            "avgSatisfaction": 4.0,
+            "avgFrequency": 4.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "very-confident": 1
+            },
+            "byDiscipline": {
+                  "structural-civil-engineering": 1
+            },
+            "isOther": true
+      },
+      {
+            "softwareName": "Sedja PDF (free)",
             "userCount": 1,
             "avgSatisfaction": 3.0,
             "avgFrequency": 2.0,
@@ -973,6 +927,48 @@ const surveyData = {
             },
             "byDiscipline": {
                   "structural-civil-engineering": 1
+            },
+            "isOther": true
+      },
+      {
+            "softwareName": "PDF24 (free)",
+            "userCount": 1,
+            "avgSatisfaction": 3.0,
+            "avgFrequency": 2.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "somewhat-confident": 1
+            },
+            "byDiscipline": {
+                  "structural-civil-engineering": 1
+            },
+            "isOther": true
+      },
+      {
+            "softwareName": "Libra Office",
+            "userCount": 1,
+            "avgSatisfaction": 3.0,
+            "avgFrequency": 2.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "somewhat-confident": 1
+            },
+            "byDiscipline": {
+                  "structural-civil-engineering": 1
+            },
+            "isOther": true
+      },
+      {
+            "softwareName": "Rhino 3D",
+            "userCount": 1,
+            "avgSatisfaction": 5.0,
+            "avgFrequency": 5.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "very-confident": 1
+            },
+            "byDiscipline": {
+                  "architecture": 1
             },
             "isOther": true
       }
@@ -993,9 +989,9 @@ const surveyData = {
                   "other": 2
             },
             "supersededBy": [
+                  "Revit/Enscape",
                   "Revit and Rhino",
-                  "Revit",
-                  "Revit/Enscape"
+                  "Revit"
             ],
             "byDiscipline": {
                   "architecture": 11
@@ -1016,8 +1012,8 @@ const surveyData = {
                   "other": 1
             },
             "supersededBy": [
-                  "Revit",
-                  "AutoCAD replaced by Revit"
+                  "AutoCAD replaced by Revit",
+                  "Revit"
             ],
             "byDiscipline": {
                   "fire-engineering": 1,
@@ -1078,8 +1074,8 @@ const surveyData = {
             },
             "supersededBy": [
                   "Google suite",
-                  "Google Workspace and LibreOffice",
-                  "Google docs, sheets etc."
+                  "Google docs, sheets etc.",
+                  "Google Workspace and LibreOffice"
             ],
             "byDiscipline": {
                   "quantity-surveying": 1,
@@ -1144,22 +1140,6 @@ const surveyData = {
             }
       },
       {
-            "softwareName": "arch-doc-other",
-            "count": 3,
-            "usedWhere": {
-                  "previous-employer": 3,
-                  "bailey-partnership": 2,
-                  "personal-capacity": 2
-            },
-            "stoppedReasons": {
-                  "company-decision": 3
-            },
-            "supersededBy": [],
-            "byDiscipline": {
-                  "architecture": 3
-            }
-      },
-      {
             "softwareName": "Dynamo (Revit)",
             "count": 3,
             "usedWhere": {
@@ -1174,23 +1154,6 @@ const surveyData = {
             "supersededBy": [
                   "Grasshopper"
             ],
-            "byDiscipline": {
-                  "architecture": 3
-            }
-      },
-      {
-            "softwareName": "arch-ai-other",
-            "count": 3,
-            "usedWhere": {
-                  "personal-capacity": 3,
-                  "bailey-partnership": 1
-            },
-            "stoppedReasons": {
-                  "personal-preference": 1,
-                  "not-required": 1,
-                  "other": 1
-            },
-            "supersededBy": [],
             "byDiscipline": {
                   "architecture": 3
             }
@@ -1262,6 +1225,36 @@ const surveyData = {
             "byDiscipline": {
                   "admin-support": 3
             }
+      },
+      {
+            "softwareName": "Procore",
+            "count": 2,
+            "usedWhere": {
+                  "previous-employer": 2
+            },
+            "stoppedReasons": {
+                  "company-decision": 1,
+                  "other": 1
+            },
+            "supersededBy": [],
+            "byDiscipline": {
+                  "project-management": 2
+            }
+      },
+      {
+            "softwareName": "Viewpoint",
+            "count": 2,
+            "usedWhere": {
+                  "previous-employer": 2
+            },
+            "stoppedReasons": {
+                  "company-decision": 1,
+                  "not-required": 1
+            },
+            "supersededBy": [],
+            "byDiscipline": {
+                  "project-management": 2
+            }
       }
 ],
     wouldLikeToUse: [
@@ -1330,6 +1323,25 @@ const surveyData = {
             ]
       },
       {
+            "softwareName": "Autodesk Forma",
+            "count": 6,
+            "avgBenefitScore": 0.67,
+            "benefits": {
+                  "unsure": 3,
+                  "moderate": 1,
+                  "slight": 2
+            },
+            "byDiscipline": {
+                  "architecture": 6
+            },
+            "interests": [
+                  "To see how it would benefit my workflow",
+                  "I don't currently use Autodesk Forma, but I can see it adding significant value during the feasibility and early design phases of a project.",
+                  "Early site formations/massing and site assessments",
+                  "Concept design"
+            ]
+      },
+      {
             "softwareName": "BuildDesk U (U-Value/Thermal)",
             "count": 6,
             "avgBenefitScore": 2.17,
@@ -1383,24 +1395,6 @@ const surveyData = {
                   "I wouldn't have to chase down someone to give me access every single time",
                   "I think it would be more beneficial than pen & paper and would allow us to link/number each snag with a photo then easily issue it to clients and contractors.",
                   "Benefits, improved tracking and record management"
-            ]
-      },
-      {
-            "softwareName": "Autodesk Forma",
-            "count": 5,
-            "avgBenefitScore": 0.4,
-            "benefits": {
-                  "unsure": 3,
-                  "slight": 2
-            },
-            "byDiscipline": {
-                  "architecture": 5
-            },
-            "interests": [
-                  "To see how it would benefit my workflow",
-                  "Early site formations/massing and site assessments",
-                  "Concept design",
-                  "expand skill set"
             ]
       },
       {
@@ -1551,6 +1545,24 @@ const surveyData = {
             ]
       },
       {
+            "softwareName": "Microsoft Project",
+            "count": 3,
+            "avgBenefitScore": 2.67,
+            "benefits": {
+                  "moderate": 1,
+                  "significant": 2
+            },
+            "byDiscipline": {
+                  "project-management": 2,
+                  "building-surveying": 1
+            },
+            "interests": [
+                  "Better functionality than Gantter",
+                  "i prefer to use this software because of some features on the software which are not present in gantter",
+                  "I find Gantter clunky and extremely hard to format when printing programmes. This wastes so much time. Microsoft Project is far superior and I would like that software back please."
+            ]
+      },
+      {
             "softwareName": "OnlyOffice",
             "count": 3,
             "avgBenefitScore": 1.0,
@@ -1619,166 +1631,39 @@ const surveyData = {
                   "So I could produce Gantt charts for clients rather than relying on a colleague to do this.",
                   "Could be used to understand program timelines better."
             ]
-      },
-      {
-            "softwareName": "FARO Scene",
-            "count": 2,
-            "avgBenefitScore": 0.0,
-            "benefits": {
-                  "unsure": 2
-            },
-            "byDiscipline": {
-                  "building-surveying": 2
-            },
-            "interests": [
-                  "No sure of the difference between Autocad re-cap",
-                  "because id ont know what it is."
-            ]
       }
 ]
   },
 
   customEntries: [
     {
-        "customName": "arch-office-other",
-        "count": 9,
-        "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "used-previously": 2,
-            "would-like-to-use": 1,
-            "currently-using": 6
-        }
-    },
-    {
-        "customName": "arch-ai-other",
-        "count": 7,
-        "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "currently-using": 3,
-            "used-previously": 3,
-            "would-like-to-use": 1
-        }
-    },
-    {
-        "customName": "arch-doc-other",
-        "count": 5,
-        "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "used-previously": 3,
-            "would-like-to-use": 2
-        }
-    },
-    {
-        "customName": "arch-bim-other",
-        "count": 5,
-        "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "currently-using": 2,
-            "used-previously": 2,
-            "would-like-to-use": 1
-        }
-    },
-    {
-        "customName": "arch-collab-other",
-        "count": 5,
-        "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "used-previously": 2,
-            "currently-using": 2,
-            "would-like-to-use": 1
-        }
-    },
-    {
-        "customName": "qs-measure-other",
-        "count": 4,
-        "disciplines": [
-            "Quantity Surveying"
-        ],
-        "usageStatuses": {
-            "currently-using": 4
-        }
-    },
-    {
-        "customName": "bs-contracts-other",
-        "count": 4,
-        "disciplines": [
-            "Building Surveying"
-        ],
-        "usageStatuses": {
-            "currently-using": 2,
-            "would-like-to-use": 2
-        }
-    },
-    {
-        "customName": "arch-viz-other",
-        "count": 4,
-        "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "used-previously": 2,
-            "would-like-to-use": 1,
-            "currently-using": 1
-        }
-    },
-    {
-        "customName": "arch-ai-other-1",
+        "customName": "Kreo",
         "count": 3,
         "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "would-like-to-use": 1,
-            "used-previously": 1,
-            "currently-using": 1
-        }
-    },
-    {
-        "customName": "qs-spec-other",
-        "count": 2,
-        "disciplines": [
             "Quantity Surveying"
         ],
         "usageStatuses": {
+            "currently-using": 3
+        }
+    },
+    {
+        "customName": "LibreOffice",
+        "count": 3,
+        "disciplines": [
+            "Quantity Surveying",
+            "architecture",
+            "structural-civil-engineering"
+        ],
+        "usageStatuses": {
+            "used-previously": 1,
             "currently-using": 2
         }
     },
     {
-        "customName": "pm-office-other",
+        "customName": "Copilot",
         "count": 2,
         "disciplines": [
-            "Project Management"
-        ],
-        "usageStatuses": {
-            "used-previously": 1,
-            "currently-using": 1
-        }
-    },
-    {
-        "customName": "pm-ai-other",
-        "count": 2,
-        "disciplines": [
-            "Project Management"
-        ],
-        "usageStatuses": {
-            "used-previously": 1,
-            "currently-using": 1
-        }
-    },
-    {
-        "customName": "struct-office-other",
-        "count": 2,
-        "disciplines": [
+            "Project Management",
             "structural-civil-engineering"
         ],
         "usageStatuses": {
@@ -1786,28 +1671,7 @@ const surveyData = {
         }
     },
     {
-        "customName": "struct-ai-other",
-        "count": 2,
-        "disciplines": [
-            "structural-civil-engineering"
-        ],
-        "usageStatuses": {
-            "currently-using": 2
-        }
-    },
-    {
-        "customName": "arch-comp-other",
-        "count": 2,
-        "disciplines": [
-            "architecture"
-        ],
-        "usageStatuses": {
-            "currently-using": 1,
-            "would-like-to-use": 1
-        }
-    },
-    {
-        "customName": "arch-bim-other-1",
+        "customName": "Chat GPT",
         "count": 2,
         "disciplines": [
             "architecture"
@@ -1817,7 +1681,72 @@ const surveyData = {
         }
     },
     {
-        "customName": "bs-collab-other",
+        "customName": "site audit pro",
+        "count": 2,
+        "disciplines": [
+            "Building Surveying"
+        ],
+        "usageStatuses": {
+            "used-previously": 2
+        }
+    },
+    {
+        "customName": "Adobe InDesign",
+        "count": 2,
+        "disciplines": [
+            "architecture"
+        ],
+        "usageStatuses": {
+            "would-like-to-use": 2
+        }
+    },
+    {
+        "customName": "Lumion",
+        "count": 2,
+        "disciplines": [
+            "architecture"
+        ],
+        "usageStatuses": {
+            "used-previously": 1,
+            "would-like-to-use": 1
+        }
+    },
+    {
+        "customName": "Rhino",
+        "count": 2,
+        "disciplines": [
+            "architecture"
+        ],
+        "usageStatuses": {
+            "used-previously": 1,
+            "would-like-to-use": 1
+        }
+    },
+    {
+        "customName": "ChatGPT",
+        "count": 2,
+        "disciplines": [
+            "architecture",
+            "structural-civil-engineering"
+        ],
+        "usageStatuses": {
+            "used-previously": 1,
+            "currently-using": 1
+        }
+    },
+    {
+        "customName": "Midjourney",
+        "count": 2,
+        "disciplines": [
+            "architecture"
+        ],
+        "usageStatuses": {
+            "currently-using": 1,
+            "used-previously": 1
+        }
+    },
+    {
+        "customName": "ACC for data capture and reporting",
         "count": 2,
         "disciplines": [
             "Building Surveying"
@@ -1827,29 +1756,57 @@ const surveyData = {
         }
     },
     {
-        "customName": "bs-condition-other",
-        "count": 2,
+        "customName": "Photoshop, Indesign",
+        "count": 1,
         "disciplines": [
-            "Building Surveying"
+            "architecture"
         ],
         "usageStatuses": {
-            "used-previously": 1,
+            "used-previously": 1
+        }
+    },
+    {
+        "customName": "KREO",
+        "count": 1,
+        "disciplines": [
+            "Quantity Surveying"
+        ],
+        "usageStatuses": {
             "currently-using": 1
         }
     },
     {
-        "customName": "bs-pathology-other",
-        "count": 2,
+        "customName": "JCT Suite",
+        "count": 1,
         "disciplines": [
-            "Building Surveying"
+            "Quantity Surveying"
         ],
         "usageStatuses": {
-            "used-previously": 1,
             "currently-using": 1
         }
     },
     {
-        "customName": "struct-analysis-other",
+        "customName": "MS Office ",
+        "count": 1,
+        "disciplines": [
+            "Project Management"
+        ],
+        "usageStatuses": {
+            "used-previously": 1
+        }
+    },
+    {
+        "customName": "Chat GPT ",
+        "count": 1,
+        "disciplines": [
+            "Project Management"
+        ],
+        "usageStatuses": {
+            "used-previously": 1
+        }
+    },
+    {
+        "customName": "Hilti - Profis (Online Based)",
         "count": 1,
         "disciplines": [
             "structural-civil-engineering"
@@ -1859,7 +1816,7 @@ const surveyData = {
         }
     },
     {
-        "customName": "struct-analysis-other-1",
+        "customName": "IdeaStatica",
         "count": 1,
         "disciplines": [
             "structural-civil-engineering"
@@ -1869,7 +1826,7 @@ const surveyData = {
         }
     },
     {
-        "customName": "struct-analysis-other-2",
+        "customName": "Comflor ME",
         "count": 1,
         "disciplines": [
             "structural-civil-engineering"
@@ -1879,7 +1836,7 @@ const surveyData = {
         }
     },
     {
-        "customName": "struct-analysis-other-3",
+        "customName": "CMF Metfloor",
         "count": 1,
         "disciplines": [
             "structural-civil-engineering"
@@ -1889,7 +1846,7 @@ const surveyData = {
         }
     },
     {
-        "customName": "struct-collab-other",
+        "customName": "Procore",
         "count": 1,
         "disciplines": [
             "structural-civil-engineering"
@@ -1899,7 +1856,37 @@ const surveyData = {
         }
     },
     {
-        "customName": "struct-collab-other-1",
+        "customName": "Aconex",
+        "count": 1,
+        "disciplines": [
+            "structural-civil-engineering"
+        ],
+        "usageStatuses": {
+            "currently-using": 1
+        }
+    },
+    {
+        "customName": "PDF Gear (free)",
+        "count": 1,
+        "disciplines": [
+            "structural-civil-engineering"
+        ],
+        "usageStatuses": {
+            "currently-using": 1
+        }
+    },
+    {
+        "customName": "Sedja PDF (free)",
+        "count": 1,
+        "disciplines": [
+            "structural-civil-engineering"
+        ],
+        "usageStatuses": {
+            "currently-using": 1
+        }
+    },
+    {
+        "customName": "PDF24 (free)",
         "count": 1,
         "disciplines": [
             "structural-civil-engineering"
@@ -2347,11 +2334,11 @@ const surveyData = {
                 "count": 4
             },
             {
-                "name": "qs-measure-other",
-                "count": 4
+                "name": "Autodesk Construction Cloud (ACC)",
+                "count": 3
             },
             {
-                "name": "Autodesk Construction Cloud (ACC)",
+                "name": "Kreo",
                 "count": 3
             }
         ],
@@ -2608,11 +2595,6 @@ const surveyData = {
         },
         {
             "software": "Revit Structure",
-            "metric": "4.67 satisfaction, 3 users",
-            "insight": "High satisfaction tool working well."
-        },
-        {
-            "software": "arch-ai-other",
             "metric": "4.67 satisfaction, 3 users",
             "insight": "High satisfaction tool working well."
         }
