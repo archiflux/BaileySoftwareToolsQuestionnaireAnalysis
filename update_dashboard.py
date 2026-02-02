@@ -242,6 +242,22 @@ def calculate_frequency_score(freq):
     }
     return freq_map.get(freq, 3)
 
+def build_custom_name_map(record):
+    """Build a map of softwareId -> customName from Full Response JSON."""
+    custom_names = {}
+    full_json = record.get('Full Response (JSON)', '')
+    if full_json:
+        try:
+            data = json.loads(full_json)
+            for sel in data.get('softwareSelections', []):
+                sw_id = sel.get('softwareId', '')
+                custom_name = sel.get('customName', '')
+                if sw_id and custom_name:
+                    custom_names[sw_id] = custom_name
+        except:
+            pass
+    return custom_names
+
 def analyze_data(records):
     """Analyze survey data and return structured results."""
 
@@ -291,6 +307,9 @@ def analyze_data(records):
     })
 
     for record in records:
+        # Build custom name map from Full Response JSON for this record
+        custom_name_map = build_custom_name_map(record)
+
         # Demographics
         discipline = record.get('Discipline', '').strip()
         if discipline:
@@ -361,7 +380,8 @@ def analyze_data(records):
                 continue
 
             is_other = sw_id.endswith('-other') or '-other-' in sw_id or sw_id.startswith('other-')
-            custom_name = item.get('customName', item.get('softwareName', ''))
+            # Get custom name from Full Response JSON map first, then fall back to item fields
+            custom_name = custom_name_map.get(sw_id, item.get('customName', item.get('softwareName', '')))
             sw_name = get_software_name(sw_id, custom_name)
 
             currently_using[sw_name]['count'] += 1
@@ -396,7 +416,8 @@ def analyze_data(records):
                 continue
 
             is_other = sw_id.endswith('-other') or '-other-' in sw_id or sw_id.startswith('other-')
-            custom_name = item.get('customName', item.get('softwareName', ''))
+            # Get custom name from Full Response JSON map first, then fall back to item fields
+            custom_name = custom_name_map.get(sw_id, item.get('customName', item.get('softwareName', '')))
             sw_name = get_software_name(sw_id, custom_name)
 
             previously_used[sw_name]['count'] += 1
@@ -429,7 +450,8 @@ def analyze_data(records):
                 continue
 
             is_other = sw_id.endswith('-other') or '-other-' in sw_id or sw_id.startswith('other-')
-            custom_name = item.get('customName', item.get('softwareName', ''))
+            # Get custom name from Full Response JSON map first, then fall back to item fields
+            custom_name = custom_name_map.get(sw_id, item.get('customName', item.get('softwareName', '')))
             sw_name = get_software_name(sw_id, custom_name)
 
             would_like_to_use[sw_name]['count'] += 1
