@@ -10,15 +10,24 @@ This repository contains survey response data from **Bailey Partnership** staff 
 BaileySoftwareToolsQuestionnaireAnalysis/
 ├── CLAUDE.md                                           # This file - AI assistant guide
 ├── README.md                                           # Project readme (minimal)
-└── Bailey Software Survey Responses - Survey Responses(6).csv  # Primary data file
+├── Bailey Software Survey Responses - Survey Responses(8).csv  # Primary data file (latest)
+├── update_dashboard.py                                 # Script to regenerate dashboard data
+└── dashboard/                                          # Interactive HTML dashboard
+    ├── index.html
+    ├── css/styles.css
+    └── js/
+        ├── data.js                                     # Generated survey data
+        ├── charts.js                                   # Chart.js visualizations
+        ├── app.js                                      # Dashboard application logic
+        └── navigation.js                               # Sidebar navigation
 ```
 
 ## Data File Details
 
-### File: `Bailey Software Survey Responses - Survey Responses(6).csv`
+### File: `Bailey Software Survey Responses - Survey Responses(8).csv`
 
 - **Format**: CSV with embedded JSON fields
-- **Records**: 80 survey responses (81 lines including header)
+- **Records**: 93 survey responses (as of latest update)
 - **Date Range**: Survey data from January 2026
 
 ### CSV Schema (25 columns)
@@ -78,7 +87,7 @@ BaileySoftwareToolsQuestionnaireAnalysis/
 
 ## JSON Data Structures
 
-### Currently Using Details
+### Currently Using Details (JSON column)
 
 ```json
 {
@@ -89,7 +98,9 @@ BaileySoftwareToolsQuestionnaireAnalysis/
 }
 ```
 
-### Previously Used Details
+**Note:** This column does NOT contain `customName` - see below for how to get custom names.
+
+### Previously Used Details (JSON column)
 
 ```json
 {
@@ -99,7 +110,7 @@ BaileySoftwareToolsQuestionnaireAnalysis/
 }
 ```
 
-### Would Like to Use Details
+### Would Like to Use Details (JSON column)
 
 ```json
 {
@@ -108,6 +119,94 @@ BaileySoftwareToolsQuestionnaireAnalysis/
   "interest": "Free text describing interest"
 }
 ```
+
+### Full Response (JSON column) - CRITICAL FOR CUSTOM NAMES
+
+The `Full Response (JSON)` column contains the complete survey response including **custom software names**:
+
+```json
+{
+  "softwareSelections": [
+    {
+      "softwareId": "qs-measure-other",
+      "softwareName": "Other - please specify",
+      "usageStatus": "currently-using",
+      "customName": "KREO"   // <-- THIS IS WHERE CUSTOM NAMES ARE STORED
+    }
+  ]
+}
+```
+
+## CRITICAL: Extracting Custom Software Names
+
+### The Problem
+
+When users select "Other - please specify" options, the `softwareId` will be something like `arch-doc-other`, `qs-measure-other`, etc. The **actual custom name** the user typed is stored in the `Full Response (JSON)` column, NOT in the detail columns.
+
+### Identifying Custom/"Other" Entries
+
+- Software IDs ending in `-other` (e.g., `arch-bim-other`)
+- Software IDs containing `-other-` (e.g., `struct-analysis-other-1`)
+- Software IDs starting with `other-`
+
+### How to Extract Custom Names Correctly
+
+**WRONG approach** (will show IDs instead of names):
+```python
+# This will NOT work - customName is not in the detail columns
+item = current_details[0]
+custom_name = item.get('customName')  # Returns None!
+```
+
+**CORRECT approach**:
+```python
+import json
+
+def build_custom_name_map(record):
+    """Build a map of softwareId -> customName from Full Response JSON."""
+    custom_names = {}
+    full_json = record.get('Full Response (JSON)', '')
+    if full_json:
+        data = json.loads(full_json)
+        for sel in data.get('softwareSelections', []):
+            sw_id = sel.get('softwareId', '')
+            custom_name = sel.get('customName', '')
+            if sw_id and custom_name:
+                custom_names[sw_id] = custom_name
+    return custom_names
+
+# For each record, first build the map
+custom_name_map = build_custom_name_map(record)
+
+# Then when processing detail columns, look up custom names
+for item in current_details:
+    sw_id = item.get('softwareId', '')
+    is_other = sw_id.endswith('-other') or '-other-' in sw_id
+
+    # Get custom name from the map we built
+    custom_name = custom_name_map.get(sw_id, '')
+
+    if is_other and custom_name:
+        sw_name = custom_name  # e.g., "Kreo", "LibreOffice", "Lumion"
+    else:
+        sw_name = SOFTWARE_NAMES.get(sw_id, sw_id)  # Standard lookup
+```
+
+### Examples of Custom Software Discovered
+
+| Custom Name | Discipline | Count |
+|-------------|------------|-------|
+| Kreo | Quantity Surveying | 4 |
+| LibreOffice | Multiple | 3 |
+| Lumion | Architecture | 3 |
+| Rhino | Architecture | 3 |
+| MS Project | Building Surveying | 3 |
+| Adobe Creative Cloud | Architecture | 3 |
+| ChatGPT | Multiple | 4 |
+| Copilot | Multiple | 2 |
+| Site Audit Pro | Building Surveying | 2 |
+| Hilti - Profis | Structural | 1 |
+| IdeaStatica | Structural | 1 |
 
 ## Common Analysis Tasks
 
@@ -206,8 +305,110 @@ cut -d',' -f7 "Bailey Software Survey Responses - Survey Responses(6).csv" | sor
 cut -d',' -f8 "Bailey Software Survey Responses - Survey Responses(6).csv" | sort | uniq -c
 ```
 
+## Dashboard Data Format (data.js)
+
+### Key Format Conventions
+
+The `data.js` file uses **Title Case with spaces** for feedback distribution keys:
+
+```javascript
+// CORRECT format in data.js:
+trainingResources: {
+  distribution: {
+    "Strongly Agree": 12,
+    "Agree": 42,
+    "Neutral": 33,
+    "Disagree": 5,
+    "Strongly Disagree": 1
+  }
+}
+```
+
+When writing chart code, use these exact key strings:
+- `"Strongly Agree"` (not `"strongly-agree"`)
+- `"Agree"` (not `"agree"`)
+- `"Neutral"` (not `"neutral"`)
+- `"Disagree"` (not `"disagree"`)
+- `"Strongly Disagree"` (not `"strongly-disagree"`)
+
+### Personal Licenses Filtering
+
+The `Personal Licences` column often contains "no" responses. Filter these out:
+
+```python
+pl_lower = pl.lower().strip()
+is_negative = pl_lower in ['no', 'no.', 'n/a', 'none', 'none.', 'na', '-', 'nil']
+is_negative_statement = pl_lower.startswith('no.') or pl_lower.startswith('no ')
+
+# Only include if it mentions actual software
+if not is_negative and not is_negative_statement:
+    # Include this entry
+```
+
+### Updating the Dashboard
+
+To regenerate `data.js` from a new CSV file:
+
+1. Update the CSV path in `update_dashboard.py`
+2. Run: `python3 update_dashboard.py`
+3. Commit changes to both `data.js` and `update_dashboard.py`
+
+## Dashboard HTML/CSS Guidelines
+
+### Avoiding Common Issues
+
+**1. List Numbering - DO NOT double-number lists**
+
+When using `<ol>` (ordered list), the browser automatically adds numbers. Never add manual numbers in the text:
+
+```html
+<!-- WRONG - double numbering (shows "1. 1. Item") -->
+<ol>
+  <li><strong>1.</strong> Item one</li>
+  <li><strong>2.</strong> Item two</li>
+</ol>
+
+<!-- CORRECT - let <ol> handle numbering -->
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+</ol>
+```
+
+Same applies to JavaScript-generated lists:
+```javascript
+// WRONG
+.map((p, i) => `<li><strong>${i + 1}.</strong> ${p}</li>`)
+
+// CORRECT
+.map(p => `<li>${p}</li>`)
+```
+
+**2. Mobile Responsive Design**
+
+Always test on mobile widths (480px, 768px). Common overflow issues:
+- Long software names without word-wrap
+- Lists with too much padding
+- Insight boxes that don't flex-wrap
+
+The CSS includes mobile breakpoints that handle these, but when adding new content:
+- Avoid fixed widths
+- Use `word-wrap: break-word` for long text
+- Test insight boxes with long list items
+
+**3. Insight Box Content**
+
+Keep list items concise. Long items will wrap on mobile but may look cramped:
+```html
+<!-- Prefer shorter, scannable items -->
+<li><strong>Kreo</strong> - QS measurement tool</li>
+
+<!-- Avoid very long descriptions in list items -->
+```
+
 ## Notes
 
-- This is a data analysis repository without application code
-- The survey appears to be conducted by Bailey Partnership for internal software assessment
+- This is a data analysis repository with an interactive HTML dashboard
+- The survey is conducted by Bailey Partnership for internal software assessment
 - Survey includes both desktop tools (AutoCAD, Revit) and cloud services (Google Workspace, ACC)
+- Custom "Other" entries are valuable discoveries - always extract them properly from `Full Response (JSON)`
