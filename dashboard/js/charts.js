@@ -437,27 +437,27 @@ function createFeedbackStackedChart(canvasId) {
       datasets: [
         {
           label: 'Strongly Disagree',
-          data: distributions.map(d => getPercentage(d, 'strongly-disagree')),
+          data: distributions.map(d => getPercentage(d, 'Strongly Disagree')),
           backgroundColor: chartColors.danger
         },
         {
           label: 'Disagree',
-          data: distributions.map(d => getPercentage(d, 'disagree')),
+          data: distributions.map(d => getPercentage(d, 'Disagree')),
           backgroundColor: '#f97316'
         },
         {
           label: 'Neutral',
-          data: distributions.map(d => getPercentage(d, 'neutral')),
+          data: distributions.map(d => getPercentage(d, 'Neutral')),
           backgroundColor: chartColors.neutral
         },
         {
           label: 'Agree',
-          data: distributions.map(d => getPercentage(d, 'agree')),
+          data: distributions.map(d => getPercentage(d, 'Agree')),
           backgroundColor: '#84cc16'
         },
         {
           label: 'Strongly Agree',
-          data: distributions.map(d => getPercentage(d, 'strongly-agree')),
+          data: distributions.map(d => getPercentage(d, 'Strongly Agree')),
           backgroundColor: chartColors.success
         }
       ]
