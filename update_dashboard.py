@@ -336,13 +336,22 @@ def analyze_data(records):
                 'role': role
             })
 
-        # Personal licenses
+        # Personal licenses - filter out "no"/"n/a" and similar negative responses
         pl = record.get('Personal Licences', '').strip()
         if pl:
-            personal_licenses.append({
-                'text': pl,
-                'discipline': discipline
-            })
+            pl_lower = pl.lower().strip()
+            # Only include meaningful responses (not just "no" or "n/a" variants)
+            is_negative = pl_lower in ['no', 'no.', 'n/a', 'none', 'none.', 'na', '-', 'nil', 'n.a', 'n.a.']
+            # Also filter out responses that start with "No" and are just negative statements
+            is_negative_statement = pl_lower.startswith('no.') or pl_lower.startswith('no,') or pl_lower.startswith('no ')
+            # Check if it's a meaningful negative (mentions software it would be useful to have)
+            has_software_mention = any(kw in pl_lower for kw in ['use', 'software', 'license', 'licence', 'tool', 'adobe', 'microsoft', 'autocad', 'photoshop'])
+
+            if not is_negative and (not is_negative_statement or has_software_mention):
+                personal_licenses.append({
+                    'text': pl,
+                    'discipline': discipline
+                })
 
         # Currently using details
         current_details = safe_json_parse(record.get('Currently Using Details (JSON)', ''))
@@ -634,7 +643,7 @@ const surveyData = {{
       distribution: {json.dumps(analysis['software_integration'])}
     }},
     improvementSuggestions: {json.dumps(analysis['improvement_suggestions'][:20], indent=6)},
-    personalLicenses: {json.dumps(analysis['personal_licenses'][:10], indent=6)}
+    personalLicenses: {json.dumps(analysis['personal_licenses'][:20], indent=6)}
   }},
 
   byDiscipline: {generate_discipline_insights(analysis, disc_list)},
@@ -786,7 +795,7 @@ def generate_insights(current_sw, prev_sw, want_sw, avg_sat, it_net, training_ne
     return json.dumps(insights, indent=4)
 
 def main():
-    csv_path = '/home/user/BaileySoftwareToolsQuestionnaireAnalysis/Bailey Software Survey Responses - Survey Responses(7).csv'
+    csv_path = '/home/user/BaileySoftwareToolsQuestionnaireAnalysis/Bailey Software Survey Responses - Survey Responses(8).csv'
     output_path = '/home/user/BaileySoftwareToolsQuestionnaireAnalysis/dashboard/js/data.js'
 
     print(f"Parsing CSV: {csv_path}")
