@@ -353,6 +353,59 @@ To regenerate `data.js` from a new CSV file:
 2. Run: `python3 update_dashboard.py`
 3. Commit changes to both `data.js` and `update_dashboard.py`
 
+## Dashboard HTML/CSS Guidelines
+
+### Avoiding Common Issues
+
+**1. List Numbering - DO NOT double-number lists**
+
+When using `<ol>` (ordered list), the browser automatically adds numbers. Never add manual numbers in the text:
+
+```html
+<!-- WRONG - double numbering (shows "1. 1. Item") -->
+<ol>
+  <li><strong>1.</strong> Item one</li>
+  <li><strong>2.</strong> Item two</li>
+</ol>
+
+<!-- CORRECT - let <ol> handle numbering -->
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+</ol>
+```
+
+Same applies to JavaScript-generated lists:
+```javascript
+// WRONG
+.map((p, i) => `<li><strong>${i + 1}.</strong> ${p}</li>`)
+
+// CORRECT
+.map(p => `<li>${p}</li>`)
+```
+
+**2. Mobile Responsive Design**
+
+Always test on mobile widths (480px, 768px). Common overflow issues:
+- Long software names without word-wrap
+- Lists with too much padding
+- Insight boxes that don't flex-wrap
+
+The CSS includes mobile breakpoints that handle these, but when adding new content:
+- Avoid fixed widths
+- Use `word-wrap: break-word` for long text
+- Test insight boxes with long list items
+
+**3. Insight Box Content**
+
+Keep list items concise. Long items will wrap on mobile but may look cramped:
+```html
+<!-- Prefer shorter, scannable items -->
+<li><strong>Kreo</strong> - QS measurement tool</li>
+
+<!-- Avoid very long descriptions in list items -->
+```
+
 ## Notes
 
 - This is a data analysis repository with an interactive HTML dashboard

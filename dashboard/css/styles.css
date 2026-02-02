@@ -939,6 +939,75 @@ li {
   .section-content {
     padding: var(--space-md);
   }
+
+  /* Prevent overflow on mobile for insight boxes and lists */
+  .insight-box {
+    flex-direction: column;
+  }
+
+  .insight-box__content ul,
+  .insight-box__content ol {
+    padding-left: var(--space-md);
+  }
+
+  .insight-box__content li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Mobile-specific overflow handling */
+@media (max-width: 480px) {
+  .main-content {
+    padding: var(--space-md);
+  }
+
+  .section-content {
+    padding: var(--space-sm);
+  }
+
+  .widget__body {
+    padding: var(--space-md);
+  }
+
+  /* Ensure text doesn't overflow containers */
+  .insight-box,
+  .widget,
+  .discipline-card {
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .insight-box__content {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .insight-box__content ul,
+  .insight-box__content ol {
+    padding-left: var(--space-sm);
+    margin: 0;
+  }
+
+  .insight-box__content li {
+    font-size: var(--text-small);
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Ensure long software names wrap */
+  .insight-box__content strong,
+  .insight-box__content li strong {
+    word-break: break-word;
+  }
+
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card__value {
+    font-size: var(--text-h2);
+  }
 }
 
 /* =========================================

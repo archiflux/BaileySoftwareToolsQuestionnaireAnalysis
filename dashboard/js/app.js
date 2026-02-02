@@ -83,7 +83,7 @@
     const prioritiesList = document.getElementById('prioritiesList');
     if (prioritiesList) {
       prioritiesList.innerHTML = summary.topPriorities
-        .map((p, i) => `<li><strong>${i + 1}.</strong> ${p}</li>`)
+        .map(p => `<li>${p}</li>`)
         .join('');
     }
   }
