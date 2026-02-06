@@ -604,7 +604,7 @@ def main():
         'metadata': {
             'totalResponses': len(responses),
             'generatedDate': datetime.now().strftime('%Y-%m-%d'),
-            'surveyPeriod': 'January 2026'
+            'surveyPeriod': 'February 2026'
         },
         'demographics': demographics,
         'softwareUsage': {

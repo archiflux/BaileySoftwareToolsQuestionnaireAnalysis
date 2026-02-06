@@ -619,14 +619,14 @@ def generate_data_js(analysis):
     js_content = f'''/**
  * Bailey Partnership Software Survey - Processed Data
  * Generated: {datetime.now().strftime('%Y-%m-%d')}
- * Survey Period: January 2026
+ * Survey Period: February 2026
  */
 
 const surveyData = {{
   metadata: {{
     totalResponses: {total},
     generatedDate: '{datetime.now().strftime('%Y-%m-%d')}',
-    surveyPeriod: 'January 2026',
+    surveyPeriod: 'February 2026',
     jobNumber: 'IIET-2026-001',
     status: 'Final'
   }},

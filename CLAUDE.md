@@ -27,8 +27,8 @@ BaileySoftwareToolsQuestionnaireAnalysis/
 ### File: `Bailey Software Survey Responses - Survey Responses(8).csv`
 
 - **Format**: CSV with embedded JSON fields
-- **Records**: 93 survey responses (as of latest update)
-- **Date Range**: Survey data from January 2026
+- **Records**: 100 survey responses (as of latest update)
+- **Date Range**: Survey data from February 2026
 
 ### CSV Schema (25 columns)
 
