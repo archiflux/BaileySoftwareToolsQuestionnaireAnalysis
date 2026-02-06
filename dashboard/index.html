@@ -14,6 +14,9 @@
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -87,6 +90,9 @@
       <a href="#9.2" class="nav-link nav-link--subsection">9.2 Short-term (3-12mo)</a>
       <a href="#9.3" class="nav-link nav-link--subsection">9.3 Long-term (1-3yr)</a>
     </div>
+    <div class="nav-section">
+      <a href="#10.0" class="nav-link nav-link--section">10.0 Summary &amp; Conclusion</a>
+    </div>
   </nav>
 
   <!-- Main Content -->
@@ -154,7 +160,7 @@
             <h3 class="widget__title">Top 5 Priorities</h3>
           </div>
           <div class="widget__body">
-            <ol id="prioritiesList" style="font-size: 1.1rem; line-height: 2;">
+            <ol id="prioritiesList" class="priorities-list" style="font-size: 1.1rem; line-height: 2;">
               <li>Implement comprehensive ACC training program</li>
               <li>Evaluate site inspection software for Building Surveying</li>
               <li>Address Adobe/Affinity Suite concerns with floating licenses</li>
@@ -724,6 +730,73 @@
           <div id="longTermActions">
             <!-- Populated by JS -->
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10.0 Summary & Conclusion -->
+    <section id="10.0" class="report-section">
+      <div class="section-band">
+        <span class="section-number">10.0</span>
+        <h2 class="section-title">Summary &amp; Conclusion</h2>
+      </div>
+      <div class="section-content">
+        <div class="subsection">
+          <h3 class="subsection-title">Executive Summary</h3>
+          <p>This comprehensive survey of 93 Bailey Partnership staff members across 10 professional disciplines provides valuable insights into the current state of software provision, satisfaction levels, training needs, and future requirements.</p>
+
+          <p><strong>Overall satisfaction is high</strong>, with an average rating of 4.12 out of 5. The IT support team receives particularly strong recognition, with 95% of respondents agreeing or strongly agreeing that IT support is effective. This reflects well on the organisation's commitment to supporting staff with their software needs.</p>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Key Findings</h3>
+          <div class="widget-grid widget-grid--2col">
+            <div class="insight-box insight-box--success">
+              <div class="insight-box__icon">✓</div>
+              <div class="insight-box__content">
+                <strong>What's Working Well</strong>
+                <ul>
+                  <li>Google Workspace has near-universal adoption (98.5%) with high satisfaction</li>
+                  <li>Strong uptake of AI tools - Gemini/Notebook LM used by 83% of respondents</li>
+                  <li>IT support receives excellent ratings across all disciplines</li>
+                  <li>Revit adoption is progressing well in Architecture and Structural disciplines</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight-box insight-box--warning">
+              <div class="insight-box__icon">!</div>
+              <div class="insight-box__content">
+                <strong>Areas for Improvement</strong>
+                <ul>
+                  <li>ACC (Autodesk Construction Cloud) needs comprehensive training - 70% require more training</li>
+                  <li>Affinity Suite dissatisfaction (2.57/5) - Adobe alternatives being requested</li>
+                  <li>Building Surveying lacks dedicated site inspection software</li>
+                  <li>Fire Engineering requires simulation software (PyroSim, Pathfinder)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Strategic Direction</h3>
+          <p>The survey results point to three key strategic priorities for the IIET Committee:</p>
+          <ol>
+            <li><strong>Training Investment</strong> - ACC, Revit, and pyRevit emerge as the top training priorities. A structured training programme should be developed, potentially including internal champions, external courses, and self-paced learning resources.</li>
+            <li><strong>Software Evaluation</strong> - Several software gaps have been identified, particularly in Building Surveying (site inspection tools), Fire Engineering (simulation software), and creative production (Adobe alternatives). These should be evaluated through pilot programmes.</li>
+            <li><strong>Standardisation</strong> - While flexibility is important, greater consistency in software usage across offices would improve collaboration and knowledge sharing. Common workflows and templates should be developed for core software.</li>
+          </ol>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Conclusion</h3>
+          <p>Bailey Partnership is well-positioned with its current software provision, evidenced by the high overall satisfaction scores and strong IT support ratings. The organisation has successfully transitioned to Google Workspace and is making good progress with BIM adoption through Revit and ACC.</p>
+
+          <p>However, this survey has identified several opportunities for improvement. By addressing the training gaps (particularly in ACC), evaluating discipline-specific tools for Building Surveying and Fire Engineering, and developing clearer policies around creative software and AI tools, the organisation can further enhance productivity and staff satisfaction.</p>
+
+          <p>The custom software entries discovered through this survey (including Kreo, various AI tools, and specialist engineering software) demonstrate that staff are proactively seeking tools to improve their work. The IIET Committee should continue to monitor these emerging needs and incorporate valuable discoveries into the standard software provision.</p>
+
+          <p class="text-muted" style="margin-top: 2rem; font-style: italic;">This report was generated from survey data collected in January 2026 and represents the views of 93 respondents across all Bailey Partnership offices.</p>
         </div>
       </div>
     </section>
