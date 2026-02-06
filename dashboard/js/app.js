@@ -292,10 +292,10 @@
   function populateGeneralFeedback() {
     const feedback = surveyData.generalFeedback;
 
-    // Improvement suggestions
+    // Improvement suggestions (two-column layout)
     const suggestionsContainer = document.getElementById('improvementSuggestions');
     if (suggestionsContainer) {
-      suggestionsContainer.innerHTML = feedback.improvementSuggestions
+      const quotes = feedback.improvementSuggestions
         .slice(0, 10)
         .map(s => `
           <div class="quote-block">
@@ -304,6 +304,7 @@
           </div>
         `)
         .join('');
+      suggestionsContainer.innerHTML = `<div class="quotes-grid">${quotes}</div>`;
     }
 
     // Personal licenses
@@ -386,10 +387,10 @@
     // Long-term strategy
     populateRecommendationsList('longTermActions', recs.longTerm);
 
-    // Red flags
+    // Red flags (two-column layout)
     const redFlagsContainer = document.getElementById('redFlags');
     if (redFlagsContainer) {
-      redFlagsContainer.innerHTML = surveyData.insights.redFlags
+      const flags = surveyData.insights.redFlags
         .map(r => `
           <div class="insight-box insight-box--${r.priority === 'Critical' ? 'danger' : 'warning'}">
             <div class="insight-box__priority">[${r.priority.toUpperCase()}]</div>
@@ -400,12 +401,13 @@
           </div>
         `)
         .join('');
+      redFlagsContainer.innerHTML = `<div class="recommendations-grid">${flags}</div>`;
     }
 
-    // Success stories
+    // Success stories (two-column layout)
     const successContainer = document.getElementById('successStories');
     if (successContainer) {
-      successContainer.innerHTML = surveyData.insights.successStories
+      const stories = surveyData.insights.successStories
         .map(s => `
           <div class="insight-box insight-box--success">
             <div class="insight-box__content">
@@ -416,17 +418,18 @@
           </div>
         `)
         .join('');
+      successContainer.innerHTML = `<div class="recommendations-grid">${stories}</div>`;
     }
   }
 
   /**
-   * Populate a recommendations list
+   * Populate a recommendations list (two-column layout)
    */
   function populateRecommendationsList(containerId, items) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    container.innerHTML = items
+    const boxes = items
       .map(item => `
         <div class="insight-box insight-box--recommendation">
           <div class="insight-box__priority">[${item.priority.toUpperCase()}]</div>
@@ -437,6 +440,7 @@
         </div>
       `)
       .join('');
+    container.innerHTML = `<div class="recommendations-grid">${boxes}</div>`;
   }
 
   /**
