@@ -1,174 +1,180 @@
 /**
  * Bailey Partnership Software Survey - Processed Data
- * Generated: 2026-02-02
+ * Generated: 2026-02-06
  * Survey Period: January 2026
  */
 
 const surveyData = {
   metadata: {
-    totalResponses: 93,
-    generatedDate: '2026-02-02',
+    totalResponses: 100,
+    generatedDate: '2026-02-06',
     surveyPeriod: 'January 2026',
     jobNumber: 'IIET-2026-001',
     status: 'Final'
   },
 
   demographics: {
-    total: 93,
+    total: 100,
     byDiscipline: [
       {
             "key": "architecture",
             "label": "Architecture",
-            "count": 29,
-            "percentage": 31.2
+            "count": 30,
+            "percentage": 30.0
       },
       {
             "key": "building-surveying",
             "label": "Building Surveying",
-            "count": 22,
-            "percentage": 23.7
+            "count": 23,
+            "percentage": 23.0
       },
       {
             "key": "project-management",
             "label": "Project Management",
             "count": 10,
-            "percentage": 10.8
+            "percentage": 10.0
       },
       {
             "key": "structural-civil-engineering",
             "label": "Structural and Civil Engineering",
-            "count": 7,
-            "percentage": 7.5
+            "count": 9,
+            "percentage": 9.0
+      },
+      {
+            "key": "admin-support",
+            "label": "Admin/Support",
+            "count": 8,
+            "percentage": 8.0
       },
       {
             "key": "building-services-engineering",
             "label": "Building Services Engineering",
             "count": 6,
-            "percentage": 6.5
+            "percentage": 6.0
       },
       {
-            "key": "admin-support",
-            "label": "Admin/Support",
-            "count": 6,
-            "percentage": 6.5
+            "key": "fire-engineering",
+            "label": "Fire Engineering",
+            "count": 5,
+            "percentage": 5.0
       },
       {
             "key": "quantity-surveying",
             "label": "Quantity Surveying",
             "count": 5,
-            "percentage": 5.4
-      },
-      {
-            "key": "fire-engineering",
-            "label": "Fire Engineering",
-            "count": 4,
-            "percentage": 4.3
+            "percentage": 5.0
       },
       {
             "key": "interior-design",
             "label": "Interior Design",
             "count": 2,
-            "percentage": 2.2
+            "percentage": 2.0
       },
       {
             "key": "town-planning",
             "label": "Town Planning",
             "count": 2,
-            "percentage": 2.2
+            "percentage": 2.0
       }
 ],
     byRoleLevel: [
       {
             "key": "general",
             "label": "General (Architect / PM / Engineer / etc.)",
-            "count": 45,
-            "percentage": 48.4
+            "count": 49,
+            "percentage": 49.0
       },
       {
             "key": "graduate-apprentice",
             "label": "Graduate/Apprentice",
-            "count": 20,
-            "percentage": 21.5
+            "count": 21,
+            "percentage": 21.0
       },
       {
             "key": "executive-director---director",
             "label": "Executive Director / Director",
-            "count": 13,
+            "count": 14,
             "percentage": 14.0
       },
       {
             "key": "senior-associate---associate",
             "label": "Senior Associate / Associate",
             "count": 13,
-            "percentage": 14.0
+            "percentage": 13.0
       },
       {
             "key": "intern-trainee",
             "label": "Intern/Trainee",
-            "count": 2,
-            "percentage": 2.2
+            "count": 3,
+            "percentage": 3.0
       }
 ],
     byOffice: [
       {
             "key": "plymouth",
             "label": "Plymouth",
-            "count": 34,
-            "percentage": 36.6
+            "count": 35,
+            "percentage": 35.0
       },
       {
             "key": "maidstone",
             "label": "Maidstone",
-            "count": 18,
-            "percentage": 19.4
+            "count": 19,
+            "percentage": 19.0
       },
       {
             "key": "exeter",
             "label": "Exeter",
-            "count": 13,
-            "percentage": 14.0
+            "count": 16,
+            "percentage": 16.0
       },
       {
             "key": "bristol",
             "label": "Bristol",
             "count": 11,
-            "percentage": 11.8
+            "percentage": 11.0
       },
       {
             "key": "chichester",
             "label": "Chichester",
-            "count": 7,
-            "percentage": 7.5
+            "count": 8,
+            "percentage": 8.0
       },
       {
             "key": "manchester",
             "label": "Manchester",
             "count": 4,
-            "percentage": 4.3
+            "percentage": 4.0
       },
       {
             "key": "gibraltar",
             "label": "Gibraltar",
             "count": 3,
-            "percentage": 3.2
+            "percentage": 3.0
       },
       {
             "key": "edinburgh",
             "label": "Edinburgh",
             "count": 1,
-            "percentage": 1.1
+            "percentage": 1.0
       },
       {
             "key": "bury-st-edmunds",
             "label": "Bury St. Edmunds",
             "count": 1,
-            "percentage": 1.1
+            "percentage": 1.0
       },
       {
             "key": "kidderminster",
             "label": "Kidderminster",
             "count": 1,
-            "percentage": 1.1
+            "percentage": 1.0
+      },
+      {
+            "key": "peterborough",
+            "label": "Peterborough",
+            "count": 1,
+            "percentage": 1.0
       }
 ]
   },
@@ -177,130 +183,130 @@ const surveyData = {
     currentlyUsing: [
       {
             "softwareName": "Google Workspace (Docs, Sheets, Slides)",
-            "userCount": 91,
-            "avgSatisfaction": 4.21,
+            "userCount": 97,
+            "avgSatisfaction": 4.25,
             "avgFrequency": 4.85,
             "trainingNeedScore": 6,
             "trainingLevels": {
                   "need-more": 4,
-                  "somewhat-confident": 47,
+                  "somewhat-confident": 50,
                   "require-significant": 1,
-                  "very-confident": 39
+                  "very-confident": 42
             },
             "byDiscipline": {
-                  "architecture": 29,
+                  "architecture": 30,
                   "project-management": 9,
-                  "fire-engineering": 4,
-                  "building-surveying": 21,
+                  "fire-engineering": 5,
+                  "building-surveying": 22,
                   "quantity-surveying": 5,
                   "building-services-engineering": 6,
                   "interior-design": 2,
-                  "structural-civil-engineering": 7,
-                  "admin-support": 6,
+                  "structural-civil-engineering": 8,
+                  "admin-support": 8,
                   "town-planning": 2
             },
             "isOther": false
       },
       {
             "softwareName": "Gemini/Notebook LM",
-            "userCount": 77,
-            "avgSatisfaction": 4.1,
+            "userCount": 81,
+            "avgSatisfaction": 4.11,
             "avgFrequency": 3.65,
             "trainingNeedScore": 18,
             "trainingLevels": {
                   "need-more": 18,
-                  "somewhat-confident": 45,
-                  "very-confident": 14
+                  "somewhat-confident": 48,
+                  "very-confident": 15
             },
             "byDiscipline": {
-                  "architecture": 25,
+                  "architecture": 26,
                   "project-management": 9,
-                  "building-surveying": 19,
+                  "building-surveying": 20,
                   "quantity-surveying": 5,
                   "building-services-engineering": 4,
                   "interior-design": 1,
-                  "structural-civil-engineering": 5,
+                  "structural-civil-engineering": 6,
                   "fire-engineering": 2,
-                  "admin-support": 5,
+                  "admin-support": 6,
                   "town-planning": 2
             },
             "isOther": false
       },
       {
+            "softwareName": "Autodesk Construction Cloud (ACC/BIM 360)",
+            "userCount": 49,
+            "avgSatisfaction": 3.94,
+            "avgFrequency": 4.31,
+            "trainingNeedScore": 12,
+            "trainingLevels": {
+                  "somewhat-confident": 29,
+                  "need-more": 12,
+                  "very-confident": 8
+            },
+            "byDiscipline": {
+                  "project-management": 7,
+                  "architecture": 28,
+                  "building-services-engineering": 5,
+                  "structural-civil-engineering": 9
+            },
+            "isOther": false
+      },
+      {
+            "softwareName": "AutoCAD",
+            "userCount": 49,
+            "avgSatisfaction": 4.08,
+            "avgFrequency": 3.59,
+            "trainingNeedScore": 10,
+            "trainingLevels": {
+                  "somewhat-confident": 22,
+                  "require-significant": 2,
+                  "very-confident": 19,
+                  "need-more": 6
+            },
+            "byDiscipline": {
+                  "building-surveying": 17,
+                  "architecture": 24,
+                  "interior-design": 2,
+                  "structural-civil-engineering": 6
+            },
+            "isOther": false
+      },
+      {
             "softwareName": "NBS Chorus",
-            "userCount": 48,
-            "avgSatisfaction": 3.73,
-            "avgFrequency": 2.83,
+            "userCount": 49,
+            "avgSatisfaction": 3.76,
+            "avgFrequency": 2.88,
             "trainingNeedScore": 12,
             "trainingLevels": {
                   "somewhat-confident": 31,
                   "require-significant": 2,
                   "need-more": 8,
-                  "very-confident": 7
+                  "very-confident": 8
             },
             "byDiscipline": {
                   "building-surveying": 14,
                   "quantity-surveying": 5,
                   "building-services-engineering": 3,
                   "interior-design": 2,
-                  "architecture": 23,
+                  "architecture": 24,
                   "structural-civil-engineering": 1
             },
             "isOther": false
       },
       {
-            "softwareName": "Autodesk Construction Cloud (ACC/BIM 360)",
-            "userCount": 46,
-            "avgSatisfaction": 3.91,
-            "avgFrequency": 4.35,
-            "trainingNeedScore": 12,
-            "trainingLevels": {
-                  "somewhat-confident": 27,
-                  "need-more": 12,
-                  "very-confident": 7
-            },
-            "byDiscipline": {
-                  "project-management": 7,
-                  "architecture": 27,
-                  "building-services-engineering": 5,
-                  "structural-civil-engineering": 7
-            },
-            "isOther": false
-      },
-      {
-            "softwareName": "AutoCAD",
-            "userCount": 46,
-            "avgSatisfaction": 4.04,
-            "avgFrequency": 3.61,
-            "trainingNeedScore": 10,
-            "trainingLevels": {
-                  "somewhat-confident": 20,
-                  "require-significant": 2,
-                  "very-confident": 18,
-                  "need-more": 6
-            },
-            "byDiscipline": {
-                  "building-surveying": 16,
-                  "architecture": 23,
-                  "interior-design": 2,
-                  "structural-civil-engineering": 5
-            },
-            "isOther": false
-      },
-      {
             "softwareName": "Autodesk Construction Cloud (ACC)",
-            "userCount": 26,
-            "avgSatisfaction": 3.15,
-            "avgFrequency": 3.62,
+            "userCount": 27,
+            "avgSatisfaction": 3.19,
+            "avgFrequency": 3.59,
             "trainingNeedScore": 16,
             "trainingLevels": {
-                  "somewhat-confident": 8,
+                  "somewhat-confident": 9,
                   "need-more": 14,
                   "very-confident": 3,
                   "require-significant": 1
             },
             "byDiscipline": {
-                  "building-surveying": 16,
+                  "building-surveying": 17,
                   "quantity-surveying": 4,
                   "interior-design": 2,
                   "fire-engineering": 2,
@@ -310,34 +316,34 @@ const surveyData = {
       },
       {
             "softwareName": "Autodesk Revit",
-            "userCount": 26,
-            "avgSatisfaction": 3.92,
-            "avgFrequency": 4.58,
+            "userCount": 27,
+            "avgSatisfaction": 3.96,
+            "avgFrequency": 4.59,
             "trainingNeedScore": 5,
             "trainingLevels": {
                   "somewhat-confident": 17,
                   "need-more": 3,
-                  "very-confident": 5,
+                  "very-confident": 6,
                   "require-significant": 1
             },
             "byDiscipline": {
-                  "architecture": 24,
+                  "architecture": 25,
                   "interior-design": 2
             },
             "isOther": false
       },
       {
             "softwareName": "OnlyOffice",
-            "userCount": 16,
-            "avgSatisfaction": 3.62,
-            "avgFrequency": 3.44,
+            "userCount": 17,
+            "avgSatisfaction": 3.59,
+            "avgFrequency": 3.41,
             "trainingNeedScore": 0,
             "trainingLevels": {
-                  "somewhat-confident": 11,
+                  "somewhat-confident": 12,
                   "very-confident": 5
             },
             "byDiscipline": {
-                  "building-surveying": 3,
+                  "building-surveying": 4,
                   "structural-civil-engineering": 4,
                   "architecture": 6,
                   "project-management": 2,
@@ -347,18 +353,18 @@ const surveyData = {
       },
       {
             "softwareName": "DocuSign",
-            "userCount": 15,
-            "avgSatisfaction": 3.87,
-            "avgFrequency": 2.47,
+            "userCount": 16,
+            "avgSatisfaction": 3.88,
+            "avgFrequency": 2.5,
             "trainingNeedScore": 4,
             "trainingLevels": {
-                  "somewhat-confident": 7,
+                  "somewhat-confident": 8,
                   "very-confident": 5,
                   "need-more": 2,
                   "require-significant": 1
             },
             "byDiscipline": {
-                  "building-surveying": 9,
+                  "building-surveying": 10,
                   "quantity-surveying": 5,
                   "admin-support": 1
             },
@@ -435,16 +441,47 @@ const surveyData = {
       },
       {
             "softwareName": "Enscape",
-            "userCount": 7,
-            "avgSatisfaction": 4.57,
-            "avgFrequency": 2.86,
+            "userCount": 8,
+            "avgSatisfaction": 4.62,
+            "avgFrequency": 2.88,
             "trainingNeedScore": 0,
             "trainingLevels": {
-                  "somewhat-confident": 6,
+                  "somewhat-confident": 7,
                   "very-confident": 1
             },
             "byDiscipline": {
-                  "architecture": 7
+                  "architecture": 8
+            },
+            "isOther": false
+      },
+      {
+            "softwareName": "Google Drive",
+            "userCount": 8,
+            "avgSatisfaction": 4.62,
+            "avgFrequency": 5.0,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "very-confident": 3,
+                  "somewhat-confident": 5
+            },
+            "byDiscipline": {
+                  "admin-support": 8
+            },
+            "isOther": false
+      },
+      {
+            "softwareName": "BambooHR",
+            "userCount": 8,
+            "avgSatisfaction": 4.38,
+            "avgFrequency": 4.12,
+            "trainingNeedScore": 1,
+            "trainingLevels": {
+                  "very-confident": 3,
+                  "somewhat-confident": 4,
+                  "need-more": 1
+            },
+            "byDiscipline": {
+                  "admin-support": 8
             },
             "isOther": false
       },
@@ -462,6 +499,21 @@ const surveyData = {
             "byDiscipline": {
                   "building-surveying": 4,
                   "project-management": 3
+            },
+            "isOther": false
+      },
+      {
+            "softwareName": "Google Meet",
+            "userCount": 7,
+            "avgSatisfaction": 4.14,
+            "avgFrequency": 4.43,
+            "trainingNeedScore": 0,
+            "trainingLevels": {
+                  "very-confident": 5,
+                  "somewhat-confident": 2
+            },
+            "byDiscipline": {
+                  "admin-support": 7
             },
             "isOther": false
       },
@@ -494,52 +546,6 @@ const surveyData = {
             "byDiscipline": {
                   "interior-design": 1,
                   "architecture": 5
-            },
-            "isOther": false
-      },
-      {
-            "softwareName": "Google Meet",
-            "userCount": 6,
-            "avgSatisfaction": 4.0,
-            "avgFrequency": 4.33,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "very-confident": 4,
-                  "somewhat-confident": 2
-            },
-            "byDiscipline": {
-                  "admin-support": 6
-            },
-            "isOther": false
-      },
-      {
-            "softwareName": "Google Drive",
-            "userCount": 6,
-            "avgSatisfaction": 4.5,
-            "avgFrequency": 5.0,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "very-confident": 3,
-                  "somewhat-confident": 3
-            },
-            "byDiscipline": {
-                  "admin-support": 6
-            },
-            "isOther": false
-      },
-      {
-            "softwareName": "BambooHR",
-            "userCount": 6,
-            "avgSatisfaction": 4.33,
-            "avgFrequency": 4.33,
-            "trainingNeedScore": 1,
-            "trainingLevels": {
-                  "very-confident": 3,
-                  "somewhat-confident": 2,
-                  "need-more": 1
-            },
-            "byDiscipline": {
-                  "admin-support": 6
             },
             "isOther": false
       },
@@ -634,6 +640,22 @@ const surveyData = {
             },
             "byDiscipline": {
                   "project-management": 4
+            },
+            "isOther": false
+      },
+      {
+            "softwareName": "Microsoft Teams",
+            "userCount": 4,
+            "avgSatisfaction": 4.5,
+            "avgFrequency": 2.5,
+            "trainingNeedScore": 1,
+            "trainingLevels": {
+                  "somewhat-confident": 2,
+                  "need-more": 1,
+                  "very-confident": 1
+            },
+            "byDiscipline": {
+                  "admin-support": 4
             },
             "isOther": false
       },
@@ -786,20 +808,6 @@ const surveyData = {
                   "structural-civil-engineering": 1
             },
             "isOther": true
-      },
-      {
-            "softwareName": "Microsoft Teams",
-            "userCount": 2,
-            "avgSatisfaction": 4.0,
-            "avgFrequency": 3.0,
-            "trainingNeedScore": 0,
-            "trainingLevels": {
-                  "somewhat-confident": 2
-            },
-            "byDiscipline": {
-                  "admin-support": 2
-            },
-            "isOther": false
       },
       {
             "softwareName": "Magic Maps",
@@ -1002,9 +1010,9 @@ const surveyData = {
                   "company-decision": 1
             },
             "supersededBy": [
+                  "Revit and Rhino",
                   "Revit",
-                  "Revit/Enscape",
-                  "Revit and Rhino"
+                  "Revit/Enscape"
             ],
             "byDiscipline": {
                   "architecture": 13
@@ -1012,14 +1020,14 @@ const surveyData = {
       },
       {
             "softwareName": "AutoCAD",
-            "count": 9,
+            "count": 10,
             "usedWhere": {
-                  "bailey-partnership": 7,
-                  "previous-employer": 5,
+                  "bailey-partnership": 8,
+                  "previous-employer": 6,
                   "personal-capacity": 1
             },
             "stoppedReasons": {
-                  "not-required": 5,
+                  "not-required": 6,
                   "superseded": 2,
                   "personal-preference": 1,
                   "other": 1
@@ -1032,7 +1040,7 @@ const surveyData = {
                   "fire-engineering": 1,
                   "structural-civil-engineering": 1,
                   "architecture": 5,
-                  "building-surveying": 2
+                  "building-surveying": 3
             }
       },
       {
@@ -1094,6 +1102,26 @@ const surveyData = {
             }
       },
       {
+            "softwareName": "Gantter",
+            "count": 6,
+            "usedWhere": {
+                  "bailey-partnership": 6
+            },
+            "stoppedReasons": {
+                  "personal-preference": 3,
+                  "superseded": 4
+            },
+            "supersededBy": [
+                  "ms project,  Gantter is rubbish!",
+                  "MS Project",
+                  "Microsoft Project, albeit that is not on my desktop anymore, which I would like back please."
+            ],
+            "byDiscipline": {
+                  "project-management": 2,
+                  "building-surveying": 4
+            }
+      },
+      {
             "softwareName": "OnlyOffice",
             "count": 6,
             "usedWhere": {
@@ -1106,9 +1134,9 @@ const surveyData = {
                   "other": 1
             },
             "supersededBy": [
+                  "Google docs, sheets etc.",
                   "Google Workspace and LibreOffice",
-                  "Google suite",
-                  "Google docs, sheets etc."
+                  "Google suite"
             ],
             "byDiscipline": {
                   "quantity-surveying": 1,
@@ -1118,23 +1146,21 @@ const surveyData = {
             }
       },
       {
-            "softwareName": "Gantter",
-            "count": 5,
+            "softwareName": "DocuSign",
+            "count": 6,
             "usedWhere": {
-                  "bailey-partnership": 5
+                  "bailey-partnership": 6,
+                  "previous-employer": 2
             },
             "stoppedReasons": {
-                  "personal-preference": 3,
-                  "superseded": 3
+                  "other": 3,
+                  "not-required": 2,
+                  "company-decision": 1
             },
-            "supersededBy": [
-                  "MS Programme",
-                  "Microsoft Project, albeit that is not on my desktop anymore, which I would like back please.",
-                  "MS Project"
-            ],
+            "supersededBy": [],
             "byDiscipline": {
-                  "project-management": 2,
-                  "building-surveying": 3
+                  "building-surveying": 4,
+                  "admin-support": 2
             }
       },
       {
@@ -1152,24 +1178,6 @@ const surveyData = {
             "byDiscipline": {
                   "architecture": 2,
                   "building-surveying": 3
-            }
-      },
-      {
-            "softwareName": "DocuSign",
-            "count": 5,
-            "usedWhere": {
-                  "bailey-partnership": 5,
-                  "previous-employer": 1
-            },
-            "stoppedReasons": {
-                  "other": 3,
-                  "not-required": 1,
-                  "company-decision": 1
-            },
-            "supersededBy": [],
-            "byDiscipline": {
-                  "building-surveying": 4,
-                  "admin-support": 1
             }
       },
       {
@@ -1286,16 +1294,16 @@ const surveyData = {
     wouldLikeToUse: [
       {
             "softwareName": "Twinmotion",
-            "count": 10,
-            "avgBenefitScore": 1.2,
+            "count": 11,
+            "avgBenefitScore": 1.27,
             "benefits": {
                   "unsure": 3,
                   "slight": 3,
-                  "moderate": 3,
+                  "moderate": 4,
                   "significant": 1
             },
             "byDiscipline": {
-                  "architecture": 10
+                  "architecture": 11
             },
             "interests": [
                   "To understand what benefits this have over Enscape",
@@ -1306,22 +1314,42 @@ const surveyData = {
       },
       {
             "softwareName": "BuildDesk U (U-Value/Thermal)",
-            "count": 9,
-            "avgBenefitScore": 2.0,
+            "count": 10,
+            "avgBenefitScore": 2.1,
             "benefits": {
-                  "significant": 4,
+                  "significant": 5,
                   "moderate": 2,
                   "slight": 2,
                   "unsure": 1
             },
             "byDiscipline": {
-                  "architecture": 9
+                  "architecture": 10
             },
             "interests": [
                   "To be able to make technical thermal decisions independently at RIBA Stage 4",
                   "It streamlines my workflow by showing me instantly how different material choices affect wall depth. Instead of calling technical desks at Kingspan or Rockwool and waiting for a response, I can run the numbers myself and keep the design moving during the early stages",
                   "u-values are a key part of our role and being able to utilise this software for early stage u-value analysis of construction makeups prior to gaining manufacturer specific ones would aid in the viability analysis of systems.",
                   "To be able to review calculations being prepared by others"
+            ]
+      },
+      {
+            "softwareName": "Autodesk Forma",
+            "count": 9,
+            "avgBenefitScore": 1.22,
+            "benefits": {
+                  "unsure": 3,
+                  "moderate": 3,
+                  "slight": 2,
+                  "significant": 1
+            },
+            "byDiscipline": {
+                  "architecture": 9
+            },
+            "interests": [
+                  "To see how it would benefit my workflow",
+                  "I don't currently use Autodesk Forma, but I can see it adding significant value during the feasibility and early design phases of a project.",
+                  "Early site formations/massing and site assessments",
+                  "Concept design"
             ]
       },
       {
@@ -1346,26 +1374,6 @@ const surveyData = {
                   "I have seen other surveyors use it, and it appears to be an efficient and well designed bit of take off software.",
                   "would improve my ability to make sketches and markups for better communication within my team",
                   "While some markup and annotation features are available in ACC, I believe I need further training to fully leverage the platform's potential. Previously, I found Bluebeam Revu to be much more effective for reviewing subcontractor packages and issuing technical comments. Currently, I am using Adobe Acrobat as a workaround, but it lacks the specialized functionality that Bluebeam offers for construction reviews."
-            ]
-      },
-      {
-            "softwareName": "Autodesk Forma",
-            "count": 8,
-            "avgBenefitScore": 1.12,
-            "benefits": {
-                  "unsure": 3,
-                  "moderate": 2,
-                  "slight": 2,
-                  "significant": 1
-            },
-            "byDiscipline": {
-                  "architecture": 8
-            },
-            "interests": [
-                  "To see how it would benefit my workflow",
-                  "I don't currently use Autodesk Forma, but I can see it adding significant value during the feasibility and early design phases of a project.",
-                  "Early site formations/massing and site assessments",
-                  "Concept design"
             ]
       },
       {
@@ -1485,6 +1493,26 @@ const surveyData = {
             ]
       },
       {
+            "softwareName": "SketchUp Pro",
+            "count": 5,
+            "avgBenefitScore": 2.0,
+            "benefits": {
+                  "significant": 2,
+                  "unsure": 1,
+                  "moderate": 2
+            },
+            "byDiscipline": {
+                  "architecture": 4,
+                  "interior-design": 1
+            },
+            "interests": [
+                  "Concept design",
+                  "I used to have ketchup and it would be great to have it again for the times we need to produce some quick models or visuals",
+                  "Its easy to use and good for making conceptual massing models, not entirely aware of its capabilities.",
+                  "It allows quick 3D modelling at early stages"
+            ]
+      },
+      {
             "softwareName": "NBS Chorus",
             "count": 4,
             "avgBenefitScore": 1.75,
@@ -1503,26 +1531,6 @@ const surveyData = {
                   "Used for specifications.",
                   "when used alongside Revit, this could speed up and streamline creating specification and schedules.",
                   "Haven't used this as of yet but am briefly aware of its capabilities"
-            ]
-      },
-      {
-            "softwareName": "SketchUp Pro",
-            "count": 4,
-            "avgBenefitScore": 2.0,
-            "benefits": {
-                  "significant": 2,
-                  "unsure": 1,
-                  "moderate": 1
-            },
-            "byDiscipline": {
-                  "architecture": 3,
-                  "interior-design": 1
-            },
-            "interests": [
-                  "Concept design",
-                  "I used to have ketchup and it would be great to have it again for the times we need to produce some quick models or visuals",
-                  "Its easy to use and good for making conceptual massing models, not entirely aware of its capabilities.",
-                  "It allows quick 3D modelling at early stages"
             ]
       },
       {
@@ -1686,8 +1694,8 @@ const surveyData = {
         "count": 3,
         "disciplines": [
             "structural-civil-engineering",
-            "architecture",
-            "Quantity Surveying"
+            "Quantity Surveying",
+            "architecture"
         ],
         "usageStatuses": {
             "used-previously": 1,
@@ -1742,8 +1750,8 @@ const surveyData = {
         "customName": "Copilot",
         "count": 2,
         "disciplines": [
-            "Project Management",
-            "structural-civil-engineering"
+            "structural-civil-engineering",
+            "Project Management"
         ],
         "usageStatuses": {
             "currently-using": 2
@@ -1783,8 +1791,8 @@ const surveyData = {
         "customName": "ChatGPT",
         "count": 2,
         "disciplines": [
-            "architecture",
-            "structural-civil-engineering"
+            "structural-civil-engineering",
+            "architecture"
         ],
         "usageStatuses": {
             "used-previously": 1,
@@ -1936,21 +1944,21 @@ const surveyData = {
 
   generalFeedback: {
     overallSatisfaction: {
-      avg: 4.12,
-      count: 93,
-      distribution: {"3": 14, "4": 51, "5": 27, "2": 1}
+      avg: 4.15,
+      count: 100,
+      distribution: {"3": 14, "4": 54, "5": 31, "2": 1}
     },
     trainingResources: {
-      netScore: 1.03,
-      distribution: {"Neutral": 33, "Agree": 42, "Strongly Disagree": 1, "Strongly Agree": 12, "Disagree": 5}
+      netScore: 1.1,
+      distribution: {"Neutral": 33, "Agree": 46, "Strongly Disagree": 1, "Strongly Agree": 15, "Disagree": 5}
     },
     itSupport: {
-      netScore: 1.91,
-      distribution: {"Strongly Agree": 57, "Agree": 32, "Neutral": 4}
+      netScore: 1.92,
+      distribution: {"Strongly Agree": 62, "Agree": 34, "Neutral": 4}
     },
     softwareIntegration: {
-      netScore: 1.01,
-      distribution: {"Agree": 43, "Disagree": 9, "Neutral": 28, "Strongly Agree": 13}
+      netScore: 1.06,
+      distribution: {"Agree": 47, "Disagree": 9, "Neutral": 29, "Strongly Agree": 15}
     },
     improvementSuggestions: [
       {
@@ -2093,32 +2101,32 @@ const surveyData = {
   byDiscipline: {
     "architecture": {
         "label": "Architecture",
-        "responseCount": 29,
-        "avgSatisfaction": 4.01,
+        "responseCount": 30,
+        "avgSatisfaction": 4.04,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
-                "count": 29
+                "count": 30
             },
             {
                 "name": "Autodesk Construction Cloud (ACC/BIM 360)",
-                "count": 27
+                "count": 28
             },
             {
                 "name": "Gemini/Notebook LM",
-                "count": 25
+                "count": 26
             },
             {
                 "name": "Autodesk Revit",
-                "count": 24
+                "count": 25
             },
             {
                 "name": "AutoCAD",
-                "count": 23
+                "count": 24
             },
             {
                 "name": "NBS Chorus",
-                "count": 23
+                "count": 24
             }
         ],
         "trainingNeeds": [
@@ -2139,28 +2147,28 @@ const surveyData = {
                 "count": 9
             }
         ],
-        "keyInsights": "Analysis for Architecture team based on 29 responses."
+        "keyInsights": "Analysis for Architecture team based on 30 responses."
     },
     "building-surveying": {
         "label": "Building Surveying",
-        "responseCount": 22,
-        "avgSatisfaction": 3.99,
+        "responseCount": 23,
+        "avgSatisfaction": 4.01,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
-                "count": 21
+                "count": 22
             },
             {
                 "name": "Gemini/Notebook LM",
-                "count": 19
+                "count": 20
             },
             {
                 "name": "AutoCAD",
-                "count": 16
+                "count": 17
             },
             {
                 "name": "Autodesk Construction Cloud (ACC)",
-                "count": 16
+                "count": 17
             },
             {
                 "name": "NBS Chorus",
@@ -2189,12 +2197,12 @@ const surveyData = {
                 "count": 8
             }
         ],
-        "keyInsights": "Analysis for Building Surveying team based on 22 responses."
+        "keyInsights": "Analysis for Building Surveying team based on 23 responses."
     },
     "project-management": {
         "label": "Project Management",
         "responseCount": 10,
-        "avgSatisfaction": 3.98,
+        "avgSatisfaction": 4.0,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
@@ -2243,24 +2251,24 @@ const surveyData = {
     },
     "structural-civil-engineering": {
         "label": "Structural and Civil Engineering",
-        "responseCount": 7,
-        "avgSatisfaction": 4.03,
+        "responseCount": 9,
+        "avgSatisfaction": 4.06,
         "topSoftware": [
             {
-                "name": "Google Workspace (Docs, Sheets, Slides)",
-                "count": 7
+                "name": "Autodesk Construction Cloud (ACC/BIM 360)",
+                "count": 9
             },
             {
-                "name": "Autodesk Construction Cloud (ACC/BIM 360)",
-                "count": 7
+                "name": "Google Workspace (Docs, Sheets, Slides)",
+                "count": 8
             },
             {
                 "name": "Gemini/Notebook LM",
-                "count": 5
+                "count": 6
             },
             {
                 "name": "AutoCAD",
-                "count": 5
+                "count": 6
             },
             {
                 "name": "OnlyOffice",
@@ -2289,12 +2297,62 @@ const surveyData = {
                 "count": 8
             }
         ],
-        "keyInsights": "Analysis for Structural and Civil Engineering team based on 7 responses."
+        "keyInsights": "Analysis for Structural and Civil Engineering team based on 9 responses."
+    },
+    "admin-support": {
+        "label": "Admin/Support",
+        "responseCount": 8,
+        "avgSatisfaction": 4.16,
+        "topSoftware": [
+            {
+                "name": "Google Workspace (Docs, Sheets, Slides)",
+                "count": 8
+            },
+            {
+                "name": "Google Drive",
+                "count": 8
+            },
+            {
+                "name": "BambooHR",
+                "count": 8
+            },
+            {
+                "name": "Google Meet",
+                "count": 7
+            },
+            {
+                "name": "Gemini/Notebook LM",
+                "count": 6
+            },
+            {
+                "name": "Microsoft Teams",
+                "count": 4
+            }
+        ],
+        "trainingNeeds": [
+            {
+                "name": "Gemini/Notebook LM",
+                "count": 18
+            },
+            {
+                "name": "Google Workspace (Docs, Sheets, Slides)",
+                "count": 5
+            },
+            {
+                "name": "DocuSign",
+                "count": 3
+            },
+            {
+                "name": "Microsoft Teams",
+                "count": 1
+            }
+        ],
+        "keyInsights": "Analysis for Admin/Support team based on 8 responses."
     },
     "building-services-engineering": {
         "label": "Building Services Engineering",
         "responseCount": 6,
-        "avgSatisfaction": 4.02,
+        "avgSatisfaction": 4.05,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
@@ -2341,33 +2399,25 @@ const surveyData = {
         ],
         "keyInsights": "Analysis for Building Services Engineering team based on 6 responses."
     },
-    "admin-support": {
-        "label": "Admin/Support",
-        "responseCount": 6,
-        "avgSatisfaction": 4.12,
+    "fire-engineering": {
+        "label": "Fire Engineering",
+        "responseCount": 5,
+        "avgSatisfaction": 4.06,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
-                "count": 6
-            },
-            {
-                "name": "Google Meet",
-                "count": 6
-            },
-            {
-                "name": "Google Drive",
-                "count": 6
-            },
-            {
-                "name": "BambooHR",
-                "count": 6
-            },
-            {
-                "name": "Gemini/Notebook LM",
                 "count": 5
             },
             {
-                "name": "Microsoft Teams",
+                "name": "Bluebeam Revu",
+                "count": 3
+            },
+            {
+                "name": "Gemini/Notebook LM",
+                "count": 2
+            },
+            {
+                "name": "Autodesk Construction Cloud (ACC)",
                 "count": 2
             }
         ],
@@ -2377,24 +2427,24 @@ const surveyData = {
                 "count": 18
             },
             {
+                "name": "Autodesk Construction Cloud (ACC)",
+                "count": 15
+            },
+            {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
                 "count": 5
             },
             {
-                "name": "DocuSign",
+                "name": "Bluebeam Revu",
                 "count": 3
-            },
-            {
-                "name": "BambooHR",
-                "count": 1
             }
         ],
-        "keyInsights": "Analysis for Admin/Support team based on 6 responses."
+        "keyInsights": "Analysis for Fire Engineering team based on 5 responses."
     },
     "quantity-surveying": {
         "label": "Quantity Surveying",
         "responseCount": 5,
-        "avgSatisfaction": 3.96,
+        "avgSatisfaction": 3.99,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
@@ -2441,52 +2491,10 @@ const surveyData = {
         ],
         "keyInsights": "Analysis for Quantity Surveying team based on 5 responses."
     },
-    "fire-engineering": {
-        "label": "Fire Engineering",
-        "responseCount": 4,
-        "avgSatisfaction": 4.03,
-        "topSoftware": [
-            {
-                "name": "Google Workspace (Docs, Sheets, Slides)",
-                "count": 4
-            },
-            {
-                "name": "Bluebeam Revu",
-                "count": 3
-            },
-            {
-                "name": "Gemini/Notebook LM",
-                "count": 2
-            },
-            {
-                "name": "Autodesk Construction Cloud (ACC)",
-                "count": 2
-            }
-        ],
-        "trainingNeeds": [
-            {
-                "name": "Gemini/Notebook LM",
-                "count": 18
-            },
-            {
-                "name": "Autodesk Construction Cloud (ACC)",
-                "count": 15
-            },
-            {
-                "name": "Google Workspace (Docs, Sheets, Slides)",
-                "count": 5
-            },
-            {
-                "name": "Bluebeam Revu",
-                "count": 3
-            }
-        ],
-        "keyInsights": "Analysis for Fire Engineering team based on 4 responses."
-    },
     "interior-design": {
         "label": "Interior Design",
         "responseCount": 2,
-        "avgSatisfaction": 3.95,
+        "avgSatisfaction": 3.98,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
@@ -2536,7 +2544,7 @@ const surveyData = {
     "town-planning": {
         "label": "Town Planning",
         "responseCount": 2,
-        "avgSatisfaction": 4.03,
+        "avgSatisfaction": 4.05,
         "topSoftware": [
             {
                 "name": "Google Workspace (Docs, Sheets, Slides)",
@@ -2581,27 +2589,27 @@ const surveyData = {
     "redFlags": [
         {
             "software": "Gemini/Notebook LM",
-            "issue": "High training need score (18) with 77 users.",
-            "priority": "High"
-        },
-        {
-            "software": "NBS Chorus",
-            "issue": "High training need score (12) with 48 users.",
+            "issue": "High training need score (18) with 81 users.",
             "priority": "High"
         },
         {
             "software": "Autodesk Construction Cloud (ACC/BIM 360)",
-            "issue": "High training need score (12) with 46 users.",
+            "issue": "High training need score (12) with 49 users.",
             "priority": "High"
         },
         {
             "software": "AutoCAD",
-            "issue": "High training need score (10) with 46 users.",
+            "issue": "High training need score (10) with 49 users.",
+            "priority": "High"
+        },
+        {
+            "software": "NBS Chorus",
+            "issue": "High training need score (12) with 49 users.",
             "priority": "High"
         },
         {
             "software": "Autodesk Construction Cloud (ACC)",
-            "issue": "High training need score (16) with 26 users.",
+            "issue": "High training need score (16) with 27 users.",
             "priority": "High"
         },
         {
@@ -2618,17 +2626,22 @@ const surveyData = {
     "successStories": [
         {
             "software": "Enscape",
-            "metric": "4.57 satisfaction, 7 users",
+            "metric": "4.62 satisfaction, 8 users",
             "insight": "High satisfaction tool working well."
         },
         {
             "software": "Google Drive",
-            "metric": "4.5 satisfaction, 6 users",
+            "metric": "4.62 satisfaction, 8 users",
             "insight": "High satisfaction tool working well."
         },
         {
             "software": "SketchUp Pro",
             "metric": "5.0 satisfaction, 5 users",
+            "insight": "High satisfaction tool working well."
+        },
+        {
+            "software": "Microsoft Teams",
+            "metric": "4.5 satisfaction, 4 users",
             "insight": "High satisfaction tool working well."
         },
         {
@@ -2729,14 +2742,14 @@ const surveyData = {
 
   executiveSummary: {
     keyMetrics: {
-      totalResponses: 93,
-      overallSatisfaction: 4.12,
-      itSupportScore: 1.91,
-      trainingResourcesScore: 1.03,
-      softwareIntegrationScore: 1.01
+      totalResponses: 100,
+      overallSatisfaction: 4.15,
+      itSupportScore: 1.92,
+      trainingResourcesScore: 1.1,
+      softwareIntegrationScore: 1.06
     },
     highlights: [
-      'High overall satisfaction (4.12/5) with Bailey Partnership software provision',
+      'High overall satisfaction (4.15/5) with Bailey Partnership software provision',
       'Excellent IT support perception (strongly positive net score)',
       'Google Workspace near-universal adoption with high satisfaction',
       'Strong uptake of Gemini/Notebook LM across disciplines',
